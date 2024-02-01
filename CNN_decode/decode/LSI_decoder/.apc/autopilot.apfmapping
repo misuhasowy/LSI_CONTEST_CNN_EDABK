@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="activation.h" path="C:\Users\ADMIN\GithubClonedRepo\decode\activation.h"/>
+    <originFiles name="decode.cpp" path="C:\Users\ADMIN\GithubClonedRepo\decode\decode.cpp"/>
+    <originFiles name="decode.h" path="C:\Users\ADMIN\GithubClonedRepo\decode\decode.h"/>
+    <originFiles name="defines.h" path="C:\Users\ADMIN\GithubClonedRepo\decode\defines.h"/>
+    <originFiles name="input_decode.h" path="C:\Users\ADMIN\GithubClonedRepo\decode\input_decode.h"/>
+    <originFiles name="weights.h" path="C:\Users\ADMIN\GithubClonedRepo\decode\weights.h"/>
+  </source>
+  <testbench>
+    <originFiles name="decode_test.cpp" path="C:\Users\ADMIN\GithubClonedRepo\decode\decode_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

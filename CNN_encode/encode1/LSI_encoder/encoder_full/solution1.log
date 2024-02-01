@@ -1,0 +1,439 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010i-clg225-1L'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z010iclg225-1L 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.153 seconds; current allocated memory: 85.762 MB.
+INFO: [HLS 200-10] Analyzing design file 'encode.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 36.418 seconds; current allocated memory: 92.312 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+WARNING: [HLS 214-387] Ignore depth setting for top argument 'full_in' (encode.cpp:162:0)
+WARNING: [HLS 214-387] Ignore depth setting for top argument 'full_out' (encode.cpp:162:0)
+INFO: [HLS 214-131] Inlining function 'void sp_conv<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0> >(int, int, int, int, int, int, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' into 'conv1(hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (encode.cpp:127:5)
+INFO: [HLS 214-131] Inlining function 'void sp_conv<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0> >(int, int, int, int, int, int, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' into 'conv2(hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (encode.cpp:133:5)
+INFO: [HLS 214-131] Inlining function 'void sp_conv<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0> >(int, int, int, int, int, int, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' into 'conv3(hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (encode.cpp:139:5)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_17_1' is marked as complete unroll implied by the pipeline pragma (encode.cpp:17:19)
+INFO: [HLS 214-291] Loop 'CFilters' is marked as complete unroll implied by the pipeline pragma (encode.cpp:20:22)
+INFO: [HLS 214-291] Loop 'CUpdateWinH' is marked as complete unroll implied by the pipeline pragma (encode.cpp:31:26)
+INFO: [HLS 214-291] Loop 'CUpdateWinW' is marked as complete unroll implied by the pipeline pragma (encode.cpp:32:30)
+INFO: [HLS 214-291] Loop 'CFilter' is marked as complete unroll implied by the pipeline pragma (encode.cpp:42:21)
+INFO: [HLS 214-291] Loop 'CWinH' is marked as complete unroll implied by the pipeline pragma (encode.cpp:44:27)
+INFO: [HLS 214-291] Loop 'CWinW' is marked as complete unroll implied by the pipeline pragma (encode.cpp:45:31)
+INFO: [HLS 214-291] Loop 'ShiftLineBuf' is marked as complete unroll implied by the pipeline pragma (encode.cpp:54:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_61_2' is marked as complete unroll implied by the pipeline pragma (encode.cpp:61:30)
+INFO: [HLS 214-291] Loop 'PFils' is marked as complete unroll implied by the pipeline pragma (encode.cpp:82:8)
+INFO: [HLS 214-291] Loop 'PUpdateWinH' is marked as complete unroll implied by the pipeline pragma (encode.cpp:91:33)
+INFO: [HLS 214-291] Loop 'PUpdateWinW' is marked as complete unroll implied by the pipeline pragma (encode.cpp:92:37)
+INFO: [HLS 214-291] Loop 'PWinH' is marked as complete unroll implied by the pipeline pragma (encode.cpp:102:31)
+INFO: [HLS 214-291] Loop 'PWinW' is marked as complete unroll implied by the pipeline pragma (encode.cpp:103:35)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_17_1' (encode.cpp:17:19) in function 'conv3' completely with a factor of 8 (encode.cpp:135:0)
+INFO: [HLS 214-186] Unrolling loop 'CFilters' (encode.cpp:20:22) in function 'conv3' completely with a factor of 8 (encode.cpp:135:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'CFilters' (encode.cpp:20:22) in function 'conv3' has been removed because the loop is unrolled completely (encode.cpp:135:0)
+INFO: [HLS 214-186] Unrolling loop 'ShiftLineBuf' (encode.cpp:54:22) in function 'conv3' completely with a factor of 2 (encode.cpp:135:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'ShiftLineBuf' (encode.cpp:54:22) in function 'conv3' has been removed because the loop is unrolled completely (encode.cpp:135:0)
+INFO: [HLS 214-186] Unrolling loop 'CFilter' (encode.cpp:42:21) in function 'conv3' completely with a factor of 8 (encode.cpp:135:0)
+INFO: [HLS 214-186] Unrolling loop 'CWinH' (encode.cpp:44:27) in function 'conv3' completely with a factor of 3 (encode.cpp:135:0)
+INFO: [HLS 214-186] Unrolling loop 'CWinW' (encode.cpp:45:31) in function 'conv3' completely with a factor of 3 (encode.cpp:135:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'CWinW' (encode.cpp:45:31) in function 'conv3' has been removed because the loop is unrolled completely (encode.cpp:135:0)
+INFO: [HLS 214-186] Unrolling loop 'CUpdateWinH' (encode.cpp:31:26) in function 'conv3' completely with a factor of 3 (encode.cpp:135:0)
+INFO: [HLS 214-186] Unrolling loop 'CUpdateWinW' (encode.cpp:32:30) in function 'conv3' completely with a factor of 3 (encode.cpp:135:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'CUpdateWinW' (encode.cpp:32:30) in function 'conv3' has been removed because the loop is unrolled completely (encode.cpp:135:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_61_2' (encode.cpp:61:30) in function 'conv3' completely with a factor of 8 (encode.cpp:135:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_17_1' (encode.cpp:17:19) in function 'conv2' completely with a factor of 8 (encode.cpp:129:0)
+INFO: [HLS 214-186] Unrolling loop 'CFilters' (encode.cpp:20:22) in function 'conv2' completely with a factor of 16 (encode.cpp:129:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'CFilters' (encode.cpp:20:22) in function 'conv2' has been removed because the loop is unrolled completely (encode.cpp:129:0)
+INFO: [HLS 214-186] Unrolling loop 'ShiftLineBuf' (encode.cpp:54:22) in function 'conv2' completely with a factor of 2 (encode.cpp:129:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'ShiftLineBuf' (encode.cpp:54:22) in function 'conv2' has been removed because the loop is unrolled completely (encode.cpp:129:0)
+INFO: [HLS 214-186] Unrolling loop 'CFilter' (encode.cpp:42:21) in function 'conv2' completely with a factor of 8 (encode.cpp:129:0)
+INFO: [HLS 214-186] Unrolling loop 'CWinH' (encode.cpp:44:27) in function 'conv2' completely with a factor of 3 (encode.cpp:129:0)
+INFO: [HLS 214-186] Unrolling loop 'CWinW' (encode.cpp:45:31) in function 'conv2' completely with a factor of 3 (encode.cpp:129:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'CWinW' (encode.cpp:45:31) in function 'conv2' has been removed because the loop is unrolled completely (encode.cpp:129:0)
+INFO: [HLS 214-186] Unrolling loop 'CUpdateWinH' (encode.cpp:31:26) in function 'conv2' completely with a factor of 3 (encode.cpp:129:0)
+INFO: [HLS 214-186] Unrolling loop 'CUpdateWinW' (encode.cpp:32:30) in function 'conv2' completely with a factor of 3 (encode.cpp:129:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'CUpdateWinW' (encode.cpp:32:30) in function 'conv2' has been removed because the loop is unrolled completely (encode.cpp:129:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_61_2' (encode.cpp:61:30) in function 'conv2' completely with a factor of 8 (encode.cpp:129:0)
+INFO: [HLS 214-186] Unrolling loop 'PUpdateWinH' (encode.cpp:91:33) in function 'sp_pool<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0> >' completely with a factor of 2 (encode.cpp:76:0)
+INFO: [HLS 214-186] Unrolling loop 'PUpdateWinW' (encode.cpp:92:37) in function 'sp_pool<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0> >' completely with a factor of 2 (encode.cpp:76:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'PUpdateWinW' (encode.cpp:92:37) in function 'sp_pool<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0> >' has been removed because the loop is unrolled completely (encode.cpp:76:0)
+INFO: [HLS 214-186] Unrolling loop 'PWinH' (encode.cpp:102:31) in function 'sp_pool<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0> >' completely with a factor of 2 (encode.cpp:76:0)
+INFO: [HLS 214-186] Unrolling loop 'PWinW' (encode.cpp:103:35) in function 'sp_pool<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0> >' completely with a factor of 2 (encode.cpp:76:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'PWinW' (encode.cpp:103:35) in function 'sp_pool<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0> >' has been removed because the loop is unrolled completely (encode.cpp:76:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_17_1' (encode.cpp:17:19) in function 'conv1' completely with a factor of 16 (encode.cpp:123:0)
+INFO: [HLS 214-186] Unrolling loop 'CFilters' (encode.cpp:20:22) in function 'conv1' completely with a factor of 1 (encode.cpp:123:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'CFilters' (encode.cpp:20:22) in function 'conv1' has been removed because the loop is unrolled completely (encode.cpp:123:0)
+INFO: [HLS 214-186] Unrolling loop 'ShiftLineBuf' (encode.cpp:54:22) in function 'conv1' completely with a factor of 2 (encode.cpp:123:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'ShiftLineBuf' (encode.cpp:54:22) in function 'conv1' has been removed because the loop is unrolled completely (encode.cpp:123:0)
+INFO: [HLS 214-186] Unrolling loop 'CFilter' (encode.cpp:42:21) in function 'conv1' completely with a factor of 16 (encode.cpp:123:0)
+INFO: [HLS 214-186] Unrolling loop 'CWinH' (encode.cpp:44:27) in function 'conv1' completely with a factor of 3 (encode.cpp:123:0)
+INFO: [HLS 214-186] Unrolling loop 'CWinW' (encode.cpp:45:31) in function 'conv1' completely with a factor of 3 (encode.cpp:123:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'CWinW' (encode.cpp:45:31) in function 'conv1' has been removed because the loop is unrolled completely (encode.cpp:123:0)
+INFO: [HLS 214-186] Unrolling loop 'CUpdateWinH' (encode.cpp:31:26) in function 'conv1' completely with a factor of 3 (encode.cpp:123:0)
+INFO: [HLS 214-186] Unrolling loop 'CUpdateWinW' (encode.cpp:32:30) in function 'conv1' completely with a factor of 3 (encode.cpp:123:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'CUpdateWinW' (encode.cpp:32:30) in function 'conv1' has been removed because the loop is unrolled completely (encode.cpp:123:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_61_2' (encode.cpp:61:30) in function 'conv1' completely with a factor of 16 (encode.cpp:123:0)
+WARNING: [HLS 214-366] Duplicating function 'void sp_pool<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0> >(int, int, int, int, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&) (.13)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (encode.cpp:147:5)
+WARNING: [HLS 214-366] Duplicating function 'void sp_pool<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0> >(int, int, int, int, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&) (.13)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (encode.cpp:153:5)
+INFO: [HLS 214-178] Inlining function 'void sp_pool<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0> >(int, int, int, int, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&) (.13.59)' into 'pool1(hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (encode.cpp:143:0)
+INFO: [HLS 214-178] Inlining function 'relu(ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'conv2(hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (encode.cpp:129:0)
+INFO: [HLS 214-178] Inlining function 'void sp_pool<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0> >(int, int, int, int, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&) (.13.59)' into 'pool2(hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (encode.cpp:149:0)
+INFO: [HLS 214-178] Inlining function 'relu(ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'conv3(hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (encode.cpp:135:0)
+INFO: [HLS 214-178] Inlining function 'void sp_pool<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0> >(int, int, int, int, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>*, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&) (.13)' into 'pool3(hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (encode.cpp:155:0)
+INFO: [HLS 214-186] Unrolling loop 'PFils' (encode.cpp:82:8) in function 'pool3' completely with a factor of 8 (encode.cpp:155:0)
+INFO: [HLS 214-186] Unrolling loop 'PFils' (encode.cpp:82:8) in function 'pool2' completely with a factor of 8 (encode.cpp:149:0)
+INFO: [HLS 214-186] Unrolling loop 'PFils' (encode.cpp:82:8) in function 'pool1' completely with a factor of 16 (encode.cpp:143:0)
+INFO: [HLS 214-248] Applying array_partition to 'linebuf1': Complete partitioning on dimension 1. (encode.cpp:124:12)
+INFO: [HLS 214-248] Applying array_partition to 'pool_buf1': Complete partitioning on dimension 1. (encode.cpp:144:12)
+INFO: [HLS 214-248] Applying array_partition to 'linebuf2': Complete partitioning on dimension 1. (encode.cpp:130:12)
+INFO: [HLS 214-248] Applying array_partition to 'pool_buf2': Complete partitioning on dimension 1. (encode.cpp:150:12)
+INFO: [HLS 214-248] Applying array_partition to 'linebuf3': Complete partitioning on dimension 1. (encode.cpp:136:12)
+INFO: [HLS 214-248] Applying array_partition to 'pool_buf3': Complete partitioning on dimension 1. (encode.cpp:156:12)
+INFO: [HLS 214-364] Automatically inlining function 'relu(ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>)' to improve effectiveness of pipeline pragma in function 'conv1(hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (encode.cpp:63:28)
+WARNING: [HLS 214-238] Unable to apply INTERFACE pragma options on a pass by value struct member field. Consider changing the signature of the struct to a pass by reference or as a pointer. In function 'encode(hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (encode.cpp:168:9)
+WARNING: [HLS 214-238] Unable to apply INTERFACE pragma options on a pass by value struct member field. Consider changing the signature of the struct to a pass by reference or as a pointer. In function 'encode(hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (encode.cpp:170:9)
+WARNING: [HLS 214-238] Unable to apply INTERFACE pragma options on a pass by value struct member field. Consider changing the signature of the struct to a pass by reference or as a pointer. In function 'encode(hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (encode.cpp:172:9)
+WARNING: [HLS 214-238] Unable to apply INTERFACE pragma options on a pass by value struct member field. Consider changing the signature of the struct to a pass by reference or as a pointer. In function 'encode(hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (encode.cpp:174:9)
+WARNING: [HLS 214-238] Unable to apply INTERFACE pragma options on a pass by value struct member field. Consider changing the signature of the struct to a pass by reference or as a pointer. In function 'encode(hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (encode.cpp:176:9)
+WARNING: [HLS 214-238] Unable to apply INTERFACE pragma options on a pass by value struct member field. Consider changing the signature of the struct to a pass by reference or as a pointer. In function 'encode(hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<40, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)' (encode.cpp:178:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 10 seconds. CPU system time: 0 seconds. Elapsed time: 35.349 seconds; current allocated memory: 109.812 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.005 seconds; current allocated memory: 109.848 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.317 seconds; current allocated memory: 139.973 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.459 seconds; current allocated memory: 153.078 MB.
+WARNING: [HLS 200-805] An internal stream 'conv1_out' (encode.cpp:167) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'pool1_out' (encode.cpp:169) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'conv2_out' (encode.cpp:171) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'pool2_out' (encode.cpp:173) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'conv3_out' (encode.cpp:175) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+INFO: [XFORM 203-712] Applying dataflow to function 'encode' (encode.cpp:162:1), detected/extracted 6 process function(s): 
+	 'conv1'
+	 'pool1'
+	 'conv2'
+	 'pool2'
+	 'conv3'
+	 'pool3'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:158:9) to (encode.cpp:85:34) in function 'pool3'... converting 9 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:158:9) to (encode.cpp:85:34) in function 'pool3'... converting 9 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:158:9) to (encode.cpp:85:34) in function 'pool3'... converting 9 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:158:9) to (encode.cpp:85:34) in function 'pool3'... converting 9 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:158:9) to (encode.cpp:85:34) in function 'pool3'... converting 9 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:158:9) to (encode.cpp:85:34) in function 'pool3'... converting 9 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:158:9) to (encode.cpp:85:34) in function 'pool3'... converting 9 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:158:9) to (encode.cpp:80:16) in function 'pool3'... converting 9 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:23:49) in function 'conv3'... converting 13 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:23:49) in function 'conv3'... converting 13 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:23:49) in function 'conv3'... converting 13 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:23:49) in function 'conv3'... converting 13 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:23:49) in function 'conv3'... converting 13 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:23:49) in function 'conv3'... converting 13 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:23:49) in function 'conv3'... converting 13 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:60:42) in function 'conv3'... converting 13 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:57:65) in function 'conv2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:57:65) in function 'conv2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:57:65) in function 'conv2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:57:65) in function 'conv2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:57:65) in function 'conv2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:57:65) in function 'conv2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:57:65) in function 'conv2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:57:65) in function 'conv2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:57:65) in function 'conv2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:57:65) in function 'conv2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:57:65) in function 'conv2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:57:65) in function 'conv2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:57:65) in function 'conv2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:57:65) in function 'conv2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:57:65) in function 'conv2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:57:65) in function 'conv2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (encode.cpp:22:4) to (encode.cpp:57:65) in function 'conv1'... converting 4 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'pool3' (encode.cpp:79:17)...11 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv3' (encode.cpp:7:16)...13 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 12 seconds. CPU system time: 0 seconds. Elapsed time: 12.249 seconds; current allocated memory: 244.836 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'PHeight' (encode.cpp:79:13) in function 'pool3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'PHeight' (encode.cpp:79:13) in function 'pool2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'PHeight' (encode.cpp:79:13) in function 'pool1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'CHeight' (encode.cpp:14:14) in function 'conv3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'CHeight' (encode.cpp:14:14) in function 'conv2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'CHeight' (encode.cpp:14:14) in function 'conv1'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 9 seconds. CPU system time: 1 seconds. Elapsed time: 9.372 seconds; current allocated memory: 401.531 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'encode' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'CHeight_CWidth'.
+WARNING: [HLS 200-880] The II Violation in module 'conv1' (loop 'CHeight_CWidth'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between fifo write operation ('conv1_out_write_ln63', encode.cpp:63->encode.cpp:127) on port 'conv1_out' (encode.cpp:63->encode.cpp:127) and fifo write operation ('conv1_out_write_ln63', encode.cpp:63->encode.cpp:127) on port 'conv1_out' (encode.cpp:63->encode.cpp:127).
+WARNING: [HLS 200-880] The II Violation in module 'conv1' (loop 'CHeight_CWidth'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between fifo write operation ('conv1_out_write_ln63', encode.cpp:63->encode.cpp:127) on port 'conv1_out' (encode.cpp:63->encode.cpp:127) and fifo write operation ('conv1_out_write_ln63', encode.cpp:63->encode.cpp:127) on port 'conv1_out' (encode.cpp:63->encode.cpp:127).
+WARNING: [HLS 200-880] The II Violation in module 'conv1' (loop 'CHeight_CWidth'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between fifo write operation ('conv1_out_write_ln63', encode.cpp:63->encode.cpp:127) on port 'conv1_out' (encode.cpp:63->encode.cpp:127) and fifo write operation ('conv1_out_write_ln63', encode.cpp:63->encode.cpp:127) on port 'conv1_out' (encode.cpp:63->encode.cpp:127).
+WARNING: [HLS 200-880] The II Violation in module 'conv1' (loop 'CHeight_CWidth'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between fifo write operation ('conv1_out_write_ln63', encode.cpp:63->encode.cpp:127) on port 'conv1_out' (encode.cpp:63->encode.cpp:127) and fifo write operation ('conv1_out_write_ln63', encode.cpp:63->encode.cpp:127) on port 'conv1_out' (encode.cpp:63->encode.cpp:127).
+WARNING: [HLS 200-880] The II Violation in module 'conv1' (loop 'CHeight_CWidth'): Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1) between fifo write operation ('conv1_out_write_ln63', encode.cpp:63->encode.cpp:127) on port 'conv1_out' (encode.cpp:63->encode.cpp:127) and fifo write operation ('conv1_out_write_ln63', encode.cpp:63->encode.cpp:127) on port 'conv1_out' (encode.cpp:63->encode.cpp:127).
+WARNING: [HLS 200-880] The II Violation in module 'conv1' (loop 'CHeight_CWidth'): Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1) between fifo write operation ('conv1_out_write_ln63', encode.cpp:63->encode.cpp:127) on port 'conv1_out' (encode.cpp:63->encode.cpp:127) and fifo write operation ('conv1_out_write_ln63', encode.cpp:63->encode.cpp:127) on port 'conv1_out' (encode.cpp:63->encode.cpp:127).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 16, Depth = 27, loop 'CHeight_CWidth'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 7 seconds. CPU system time: 0 seconds. Elapsed time: 6.951 seconds; current allocated memory: 421.473 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.852 seconds; current allocated memory: 422.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'PHeight_PWidth'.
+WARNING: [HLS 200-880] The II Violation in module 'pool1' (loop 'PHeight_PWidth'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between fifo read operation ('pool_win1', encode.cpp:88->encode.cpp:147) on port 'conv1_out' (encode.cpp:88->encode.cpp:147) and fifo read operation ('pool_win1', encode.cpp:88->encode.cpp:147) on port 'conv1_out' (encode.cpp:88->encode.cpp:147).
+WARNING: [HLS 200-880] The II Violation in module 'pool1' (loop 'PHeight_PWidth'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between fifo read operation ('pool_win1', encode.cpp:88->encode.cpp:147) on port 'conv1_out' (encode.cpp:88->encode.cpp:147) and fifo read operation ('pool_win1', encode.cpp:88->encode.cpp:147) on port 'conv1_out' (encode.cpp:88->encode.cpp:147).
+WARNING: [HLS 200-880] The II Violation in module 'pool1' (loop 'PHeight_PWidth'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between fifo read operation ('pool_win1', encode.cpp:88->encode.cpp:147) on port 'conv1_out' (encode.cpp:88->encode.cpp:147) and fifo read operation ('pool_win1', encode.cpp:88->encode.cpp:147) on port 'conv1_out' (encode.cpp:88->encode.cpp:147).
+WARNING: [HLS 200-880] The II Violation in module 'pool1' (loop 'PHeight_PWidth'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between fifo read operation ('pool_win1', encode.cpp:88->encode.cpp:147) on port 'conv1_out' (encode.cpp:88->encode.cpp:147) and fifo read operation ('pool_win1', encode.cpp:88->encode.cpp:147) on port 'conv1_out' (encode.cpp:88->encode.cpp:147).
+WARNING: [HLS 200-880] The II Violation in module 'pool1' (loop 'PHeight_PWidth'): Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1) between fifo read operation ('pool_win1', encode.cpp:88->encode.cpp:147) on port 'conv1_out' (encode.cpp:88->encode.cpp:147) and fifo read operation ('pool_win1', encode.cpp:88->encode.cpp:147) on port 'conv1_out' (encode.cpp:88->encode.cpp:147).
+WARNING: [HLS 200-880] The II Violation in module 'pool1' (loop 'PHeight_PWidth'): Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1) between fifo read operation ('pool_win1', encode.cpp:88->encode.cpp:147) on port 'conv1_out' (encode.cpp:88->encode.cpp:147) and fifo read operation ('pool_win1', encode.cpp:88->encode.cpp:147) on port 'conv1_out' (encode.cpp:88->encode.cpp:147).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 16, Depth = 19, loop 'PHeight_PWidth'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 7 seconds. CPU system time: 0 seconds. Elapsed time: 7.635 seconds; current allocated memory: 457.027 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.203 seconds; current allocated memory: 457.215 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'CHeight_CWidth'.
+WARNING: [HLS 200-880] The II Violation in module 'conv2' (loop 'CHeight_CWidth'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between fifo read operation ('in_val', encode.cpp:26->encode.cpp:133) on port 'pool1_out' (encode.cpp:26->encode.cpp:133) and fifo read operation ('in_val', encode.cpp:26->encode.cpp:133) on port 'pool1_out' (encode.cpp:26->encode.cpp:133).
+WARNING: [HLS 200-880] The II Violation in module 'conv2' (loop 'CHeight_CWidth'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between fifo read operation ('in_val', encode.cpp:26->encode.cpp:133) on port 'pool1_out' (encode.cpp:26->encode.cpp:133) and fifo read operation ('in_val', encode.cpp:26->encode.cpp:133) on port 'pool1_out' (encode.cpp:26->encode.cpp:133).
+WARNING: [HLS 200-880] The II Violation in module 'conv2' (loop 'CHeight_CWidth'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between fifo read operation ('in_val', encode.cpp:26->encode.cpp:133) on port 'pool1_out' (encode.cpp:26->encode.cpp:133) and fifo read operation ('in_val', encode.cpp:26->encode.cpp:133) on port 'pool1_out' (encode.cpp:26->encode.cpp:133).
+WARNING: [HLS 200-880] The II Violation in module 'conv2' (loop 'CHeight_CWidth'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between fifo read operation ('in_val', encode.cpp:26->encode.cpp:133) on port 'pool1_out' (encode.cpp:26->encode.cpp:133) and fifo read operation ('in_val', encode.cpp:26->encode.cpp:133) on port 'pool1_out' (encode.cpp:26->encode.cpp:133).
+WARNING: [HLS 200-880] The II Violation in module 'conv2' (loop 'CHeight_CWidth'): Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1) between fifo read operation ('in_val', encode.cpp:26->encode.cpp:133) on port 'pool1_out' (encode.cpp:26->encode.cpp:133) and fifo read operation ('in_val', encode.cpp:26->encode.cpp:133) on port 'pool1_out' (encode.cpp:26->encode.cpp:133).
+WARNING: [HLS 200-880] The II Violation in module 'conv2' (loop 'CHeight_CWidth'): Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1) between fifo read operation ('in_val', encode.cpp:26->encode.cpp:133) on port 'pool1_out' (encode.cpp:26->encode.cpp:133) and fifo read operation ('in_val', encode.cpp:26->encode.cpp:133) on port 'pool1_out' (encode.cpp:26->encode.cpp:133).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 16, Depth = 154, loop 'CHeight_CWidth'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 95 seconds. CPU system time: 0 seconds. Elapsed time: 94.854 seconds; current allocated memory: 570.199 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 18 seconds. CPU system time: 0 seconds. Elapsed time: 18.671 seconds; current allocated memory: 570.199 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'PHeight_PWidth'.
+WARNING: [HLS 200-880] The II Violation in module 'pool2' (loop 'PHeight_PWidth'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between fifo read operation ('pool_win2', encode.cpp:88->encode.cpp:153) on port 'conv2_out' (encode.cpp:88->encode.cpp:153) and fifo read operation ('pool_win2', encode.cpp:88->encode.cpp:153) on port 'conv2_out' (encode.cpp:88->encode.cpp:153).
+WARNING: [HLS 200-880] The II Violation in module 'pool2' (loop 'PHeight_PWidth'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between fifo read operation ('pool_win2', encode.cpp:88->encode.cpp:153) on port 'conv2_out' (encode.cpp:88->encode.cpp:153) and fifo read operation ('pool_win2', encode.cpp:88->encode.cpp:153) on port 'conv2_out' (encode.cpp:88->encode.cpp:153).
+WARNING: [HLS 200-880] The II Violation in module 'pool2' (loop 'PHeight_PWidth'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between fifo read operation ('pool_win2', encode.cpp:88->encode.cpp:153) on port 'conv2_out' (encode.cpp:88->encode.cpp:153) and fifo read operation ('pool_win2', encode.cpp:88->encode.cpp:153) on port 'conv2_out' (encode.cpp:88->encode.cpp:153).
+WARNING: [HLS 200-880] The II Violation in module 'pool2' (loop 'PHeight_PWidth'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between fifo read operation ('pool_win2', encode.cpp:88->encode.cpp:153) on port 'conv2_out' (encode.cpp:88->encode.cpp:153) and fifo read operation ('pool_win2', encode.cpp:88->encode.cpp:153) on port 'conv2_out' (encode.cpp:88->encode.cpp:153).
+WARNING: [HLS 200-880] The II Violation in module 'pool2' (loop 'PHeight_PWidth'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between fifo read operation ('pool_win2', encode.cpp:88->encode.cpp:153) on port 'conv2_out' (encode.cpp:88->encode.cpp:153) and fifo read operation ('pool_win2', encode.cpp:88->encode.cpp:153) on port 'conv2_out' (encode.cpp:88->encode.cpp:153).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 8, Depth = 11, loop 'PHeight_PWidth'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 5 seconds. CPU system time: 0 seconds. Elapsed time: 5.242 seconds; current allocated memory: 570.199 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.425 seconds; current allocated memory: 570.199 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'CHeight_CWidth'.
+WARNING: [HLS 200-880] The II Violation in module 'conv3' (loop 'CHeight_CWidth'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between fifo read operation ('in_val', encode.cpp:26->encode.cpp:139) on port 'pool2_out' (encode.cpp:26->encode.cpp:139) and fifo read operation ('in_val', encode.cpp:26->encode.cpp:139) on port 'pool2_out' (encode.cpp:26->encode.cpp:139).
+WARNING: [HLS 200-880] The II Violation in module 'conv3' (loop 'CHeight_CWidth'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between fifo read operation ('in_val', encode.cpp:26->encode.cpp:139) on port 'pool2_out' (encode.cpp:26->encode.cpp:139) and fifo read operation ('in_val', encode.cpp:26->encode.cpp:139) on port 'pool2_out' (encode.cpp:26->encode.cpp:139).
+WARNING: [HLS 200-880] The II Violation in module 'conv3' (loop 'CHeight_CWidth'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between fifo read operation ('in_val', encode.cpp:26->encode.cpp:139) on port 'pool2_out' (encode.cpp:26->encode.cpp:139) and fifo read operation ('in_val', encode.cpp:26->encode.cpp:139) on port 'pool2_out' (encode.cpp:26->encode.cpp:139).
+WARNING: [HLS 200-880] The II Violation in module 'conv3' (loop 'CHeight_CWidth'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between fifo read operation ('in_val', encode.cpp:26->encode.cpp:139) on port 'pool2_out' (encode.cpp:26->encode.cpp:139) and fifo read operation ('in_val', encode.cpp:26->encode.cpp:139) on port 'pool2_out' (encode.cpp:26->encode.cpp:139).
+WARNING: [HLS 200-880] The II Violation in module 'conv3' (loop 'CHeight_CWidth'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between fifo read operation ('in_val', encode.cpp:26->encode.cpp:139) on port 'pool2_out' (encode.cpp:26->encode.cpp:139) and fifo read operation ('in_val', encode.cpp:26->encode.cpp:139) on port 'pool2_out' (encode.cpp:26->encode.cpp:139).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 8, Depth = 82, loop 'CHeight_CWidth'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 35 seconds. CPU system time: 0 seconds. Elapsed time: 36.181 seconds; current allocated memory: 570.699 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 6 seconds. CPU system time: 0 seconds. Elapsed time: 5.174 seconds; current allocated memory: 570.699 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'PHeight_PWidth'.
+WARNING: [HLS 200-880] The II Violation in module 'pool3' (loop 'PHeight_PWidth'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between fifo read operation ('in_pool_val', encode.cpp:88->encode.cpp:159) on port 'conv3_out' (encode.cpp:88->encode.cpp:159) and fifo read operation ('in_pool_val', encode.cpp:88->encode.cpp:159) on port 'conv3_out' (encode.cpp:88->encode.cpp:159).
+WARNING: [HLS 200-880] The II Violation in module 'pool3' (loop 'PHeight_PWidth'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between fifo read operation ('in_pool_val', encode.cpp:88->encode.cpp:159) on port 'conv3_out' (encode.cpp:88->encode.cpp:159) and fifo read operation ('in_pool_val', encode.cpp:88->encode.cpp:159) on port 'conv3_out' (encode.cpp:88->encode.cpp:159).
+WARNING: [HLS 200-880] The II Violation in module 'pool3' (loop 'PHeight_PWidth'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between fifo read operation ('in_pool_val', encode.cpp:88->encode.cpp:159) on port 'conv3_out' (encode.cpp:88->encode.cpp:159) and fifo read operation ('in_pool_val', encode.cpp:88->encode.cpp:159) on port 'conv3_out' (encode.cpp:88->encode.cpp:159).
+WARNING: [HLS 200-880] The II Violation in module 'pool3' (loop 'PHeight_PWidth'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between fifo read operation ('in_pool_val', encode.cpp:88->encode.cpp:159) on port 'conv3_out' (encode.cpp:88->encode.cpp:159) and fifo read operation ('in_pool_val', encode.cpp:88->encode.cpp:159) on port 'conv3_out' (encode.cpp:88->encode.cpp:159).
+WARNING: [HLS 200-880] The II Violation in module 'pool3' (loop 'PHeight_PWidth'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between fifo read operation ('in_pool_val', encode.cpp:88->encode.cpp:159) on port 'conv3_out' (encode.cpp:88->encode.cpp:159) and fifo read operation ('in_pool_val', encode.cpp:88->encode.cpp:159) on port 'conv3_out' (encode.cpp:88->encode.cpp:159).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 8, Depth = 12, loop 'PHeight_PWidth'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 3.337 seconds; current allocated memory: 570.699 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.416 seconds; current allocated memory: 570.699 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'encode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.331 seconds; current allocated memory: 570.699 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.498 seconds; current allocated memory: 570.699 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv1' pipeline 'CHeight_CWidth' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_20s_59_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_21ns_60_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_23ns_62_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_23s_62_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_24ns_63_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_24s_63_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_25ns_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_25s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_26ns_65_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_26s_65_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_27ns_66_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_27s_66_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_28ns_67_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_28s_67_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_29ns_68_2_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_29s_68_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_30ns_69_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_30s_69_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_31ns_70_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_33s_70_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_30_5_40_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.616 seconds; current allocated memory: 571.477 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'pool1' pipeline 'PHeight_PWidth' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_28_5_40_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 4.18 seconds; current allocated memory: 592.797 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2' pipeline 'CHeight_CWidth' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'conv2' is 33122 from HDL expression: ((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_20s_59_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_21ns_60_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_22ns_61_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_22s_61_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_23ns_62_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_23s_62_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_24ns_63_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_24s_63_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_25ns_64_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_25s_64_2_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_26ns_65_2_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_26s_65_2_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_27ns_66_2_1': 10 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_27s_66_2_1': 11 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_28ns_67_2_1': 15 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_28s_67_2_1': 15 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_29ns_68_2_1': 24 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_29s_68_2_1': 12 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_30ns_69_2_1': 14 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_30s_69_2_1': 11 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_31ns_70_2_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_31s_70_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_34s_70_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_16_4_40_1_1': 32 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 6 seconds. CPU system time: 2 seconds. Elapsed time: 8.945 seconds; current allocated memory: 710.992 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'pool2' pipeline 'PHeight_PWidth' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_14_4_40_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 29 seconds. CPU system time: 10 seconds. Elapsed time: 39.434 seconds; current allocated memory: 863.324 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv3' pipeline 'CHeight_CWidth' pipeline type 'loop pipeline'
+INFO: [HLS 200-1553] Disabling free running pipeline (frp) architecture on pipeline 'CHeight_CWidth' in module 'conv3', because the estimated Stream Port Number is 49, which is bigger than the frp_stream_port_number threshold of 20.
+INFO: [RTGEN 206-104] Estimated max fanout for 'conv3' is 31854 from HDL expression: ((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_21s_60_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_22s_61_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_23ns_62_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_23s_62_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_24ns_63_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_24s_63_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_25ns_64_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_25s_64_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_26ns_65_2_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_26s_65_2_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_27ns_66_2_1': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_27s_66_2_1': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_28ns_67_2_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_28s_67_2_1': 14 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_29ns_68_2_1': 20 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_29s_68_2_1': 11 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_30ns_69_2_1': 10 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_30s_69_2_1': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_31ns_70_2_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_31s_70_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_32s_70_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_9_4_40_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 4.696 seconds; current allocated memory: 879.367 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'pool3' pipeline 'PHeight_PWidth' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_8_3_40_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 15 seconds. CPU system time: 4 seconds. Elapsed time: 19.203 seconds; current allocated memory: 958.059 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'encode' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'encode/full_in' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'encode/full_out' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'encode' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'encode'.
+INFO: [RTMG 210-285] Implementing FIFO 'conv1_out_U(encode_fifo_w40_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pool1_out_U(encode_fifo_w40_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'conv2_out_U(encode_fifo_w40_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'pool2_out_U(encode_fifo_w40_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'conv3_out_U(encode_fifo_w40_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_pool1_U0_U(encode_start_for_pool1_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_conv2_U0_U(encode_start_for_conv2_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_pool2_U0_U(encode_start_for_pool2_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_conv3_U0_U(encode_start_for_conv3_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_pool3_U0_U(encode_start_for_pool3_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.595 seconds; current allocated memory: 971.586 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 21 seconds. CPU system time: 1 seconds. Elapsed time: 22.183 seconds; current allocated memory: 982.879 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.701 seconds; current allocated memory: 1015.301 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for encode.
+INFO: [VLOG 209-307] Generating Verilog RTL for encode.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 121.61 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 299 seconds. CPU system time: 22 seconds. Elapsed time: 387.978 seconds; current allocated memory: 929.629 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================

@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# xsim v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Jan 31 18:29:01 2024
+# Process ID: 15532
+# Current directory: C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog
+# Command line: xsim.exe -source {xsim.dir/decode/xsim_script.tcl}
+# Log file: C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/xsim.log
+# Journal file: C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog\xsim.jou
+# Running On: Admin-PC, OS: Windows, CPU Frequency: 2808 MHz, CPU Physical cores: 4, Host memory: 16724 MB
+#-----------------------------------------------------------
+start_gui
+source xsim.dir/decode/xsim_script.tcl
+open_wave_config decode_dataflow_ana.wcfg
+source decode.tcl

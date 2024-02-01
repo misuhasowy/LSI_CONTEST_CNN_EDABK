@@ -1,0 +1,211 @@
+
+C:\Users\ADMIN\GithubClonedRepo\encode1\LSI_encoder\solution1\sim\verilog>set PATH= 
+
+C:\Users\ADMIN\GithubClonedRepo\encode1\LSI_encoder\solution1\sim\verilog>call C:/Xilinx/Vivado/2023.1/bin/xelab xil_defaultlib.apatb_encode_top glbl -Oenable_linking_all_libraries  -prj encode.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_1_15 -L floating_point_v7_0_20 --lib "ieee_proposed=./ieee_proposed" -s encode -debug all 
+ECHO is off.
+ECHO is off.
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_encode_top glbl -Oenable_linking_all_libraries -prj encode.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_15 -L floating_point_v7_0_20 --lib ieee_proposed=./ieee_proposed -s encode -debug all 
+Multi-threading is on. Using 6 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/AESL_axi_s_full_in.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_full_in
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/AESL_axi_s_full_out.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_full_out
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_encode_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_conv1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_conv1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_conv2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_conv2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_conv3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_conv3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_fifo_w40_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_fifo_w40_d2_S
+INFO: [VRFC 10-311] analyzing module encode_fifo_w40_d2_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_flow_control_loop_pipe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_flow_control_loop_pipe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_20s_59_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_20s_59_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_21ns_60_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_21ns_60_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_21s_60_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_21s_60_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_22ns_61_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_22ns_61_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_22s_61_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_22s_61_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_23ns_62_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_23ns_62_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_23s_62_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_23s_62_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_24ns_63_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_24ns_63_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_24s_63_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_24s_63_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_25ns_64_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_25ns_64_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_25s_64_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_25s_64_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_26ns_65_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_26ns_65_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_26s_65_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_26s_65_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_27ns_66_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_27ns_66_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_27s_66_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_27s_66_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_28ns_67_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_28ns_67_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_28s_67_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_28s_67_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_29ns_68_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_29ns_68_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_29s_68_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_29s_68_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_30ns_69_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_30ns_69_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_30s_69_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_30s_69_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_31ns_70_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_31ns_70_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_31s_70_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_31s_70_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_32s_70_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_32s_70_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_33s_70_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_33s_70_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mul_40s_34s_70_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mul_40s_34s_70_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mux_14_4_40_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mux_14_4_40_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mux_16_4_40_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mux_16_4_40_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mux_28_5_40_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mux_28_5_40_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mux_30_5_40_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mux_30_5_40_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mux_8_3_40_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mux_8_3_40_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_mux_9_4_40_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_mux_9_4_40_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_pool1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_pool1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_pool2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_pool2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_pool3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_pool3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_regslice_both
+INFO: [VRFC 10-311] analyzing module encode_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_start_for_conv2_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_start_for_conv2_U0
+INFO: [VRFC 10-311] analyzing module encode_start_for_conv2_U0_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_start_for_conv3_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_start_for_conv3_U0
+INFO: [VRFC 10-311] analyzing module encode_start_for_conv3_U0_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_start_for_pool1_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_start_for_pool1_U0
+INFO: [VRFC 10-311] analyzing module encode_start_for_pool1_U0_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_start_for_pool2_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_start_for_pool2_U0
+INFO: [VRFC 10-311] analyzing module encode_start_for_pool2_U0_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/encode_start_for_pool3_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_start_for_pool3_U0
+INFO: [VRFC 10-311] analyzing module encode_start_for_pool3_U0_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/fifo_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/encode1/LSI_encoder/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.encode_mul_40s_21ns_60_2_1(NUM_S...
+Compiling module xil_defaultlib.encode_mul_40s_23ns_62_2_1(NUM_S...
+Compiling module xil_defaultlib.encode_mul_40s_24ns_63_2_1(NUM_S...
+Compiling module xil_defaultlib.encode_mul_40s_25ns_64_2_1(NUM_S...
+Compiling module xil_defaultlib.encode_mul_40s_26ns_65_2_1(NUM_S...
+Compiling module xil_defaultlib.encode_mul_40s_27ns_66_2_1(NUM_S...
+Compiling module xil_defaultlib.encode_mul_40s_28ns_67_2_1(NUM_S...
+Compiling module xil_defaultlib.encode_mul_40s_29ns_68_2_1(NUM_S...
+Compiling module xil_defaultlib.encode_mul_40s_30ns_69_2_1(NUM_S...
+Compiling module xil_defaultlib.encode_mul_40s_31ns_70_2_1(NUM_S...
+Compiling module xil_defaultlib.encode_mul_40s_20s_59_2_1(NUM_ST...
+Compiling module xil_defaultlib.encode_mul_40s_23s_62_2_1(NUM_ST...
+Compiling module xil_defaultlib.encode_mul_40s_24s_63_2_1(NUM_ST...
+Compiling module xil_defaultlib.encode_mul_40s_25s_64_2_1(NUM_ST...
+Compiling module xil_defaultlib.encode_mul_40s_26s_65_2_1(NUM_ST...
+Compiling module xil_defaultlib.encode_mul_40s_27s_66_2_1(NUM_ST...
+Compiling module xil_defaultlib.encode_mul_40s_28s_67_2_1(NUM_ST...
+Compiling module xil_defaultlib.encode_mul_40s_29s_68_2_1(NUM_ST...
+Compiling module xil_defaultlib.encode_mul_40s_30s_69_2_1(NUM_ST...
+Compiling module xil_defaultlib.encode_mul_40s_33s_70_2_1(NUM_ST...
+Compiling module xil_defaultlib.encode_mux_30_5_40_1_1(ID=1,din0...
+Compiling module xil_defaultlib.encode_flow_control_loop_pipe
+Compiling module xil_defaultlib.encode_regslice_both(DataWidth=4...
+Compiling module xil_defaultlib.encode_conv1
+Compiling module xil_defaultlib.encode_mux_28_5_40_1_1(ID=1,din0...
+Compiling module xil_defaultlib.encode_pool1
+Compiling module xil_defaultlib.encode_mul_40s_22ns_61_2_1(NUM_S...
+Compiling module xil_defaultlib.encode_mul_40s_22s_61_2_1(NUM_ST...
+Compiling module xil_defaultlib.encode_mul_40s_34s_70_2_1(NUM_ST...
+Compiling module xil_defaultlib.encode_mul_40s_31s_70_2_1(NUM_ST...
+Compiling module xil_defaultlib.encode_mux_16_4_40_1_1(ID=1,din0...
+Compiling module xil_defaultlib.encode_conv2
+Compiling module xil_defaultlib.encode_mux_14_4_40_1_1(ID=1,din0...
+Compiling module xil_defaultlib.encode_pool2
+Compiling module xil_defaultlib.encode_mul_40s_21s_60_2_1(NUM_ST...
+Compiling module xil_defaultlib.encode_mul_40s_32s_70_2_1(NUM_ST...
+Compiling module xil_defaultlib.encode_mux_9_4_40_1_1(ID=1,din0_...
+Compiling module xil_defaultlib.encode_conv3
+Compiling module xil_defaultlib.encode_mux_8_3_40_1_1(ID=1,din0_...
+Compiling module xil_defaultlib.encode_pool3
+Compiling module xil_defaultlib.encode_fifo_w40_d2_S_ShiftReg(DE...
+Compiling module xil_defaultlib.encode_fifo_w40_d2_S(DEPTH=2'b10...
+Compiling module xil_defaultlib.encode_start_for_pool1_U0_ShiftR...
+Compiling module xil_defaultlib.encode_start_for_pool1_U0
+Compiling module xil_defaultlib.encode_start_for_conv2_U0_ShiftR...
+Compiling module xil_defaultlib.encode_start_for_conv2_U0
+Compiling module xil_defaultlib.encode_start_for_pool2_U0_ShiftR...
+Compiling module xil_defaultlib.encode_start_for_pool2_U0
+Compiling module xil_defaultlib.encode_start_for_conv3_U0_ShiftR...
+Compiling module xil_defaultlib.encode_start_for_conv3_U0
+Compiling module xil_defaultlib.encode_start_for_pool3_U0_ShiftR...
+Compiling module xil_defaultlib.encode_start_for_pool3_U0
+Compiling module xil_defaultlib.encode
+Compiling module xil_defaultlib.fifo(DEPTH=784,WIDTH=40)
+Compiling module xil_defaultlib.AESL_axi_s_full_in
+Compiling module xil_defaultlib.fifo(DEPTH=128,WIDTH=40)
+Compiling module xil_defaultlib.AESL_axi_s_full_out
+Compiling module xil_defaultlib.df_fifo_intf
+Compiling module xil_defaultlib.df_process_intf
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=16)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=8)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.fifo_monitor_1
+Compiling module xil_defaultlib.apatb_encode_top
+Compiling module work.glbl
+Built simulation snapshot encode
+ECHO is off.
+ECHO is off.
+
+****** xsim v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+start_gui

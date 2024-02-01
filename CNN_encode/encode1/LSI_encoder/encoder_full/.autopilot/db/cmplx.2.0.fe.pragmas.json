@@ -1,0 +1,113 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "7 3 4 8 2 6",
+    "file": "encode.cpp",
+    "fileloc": 162,
+    "instructions": 55,
+    "name": "encode",
+    "total_instructions": 78960
+  },
+  "1": {
+    "basicblocks": 95,
+    "calls": "",
+    "file": "encode.cpp",
+    "fileloc": 76,
+    "instructions": 277,
+    "loads": {
+      "L": 17
+    },
+    "name": "sp_pool<ap_fixed<40, 10, AP_TRN, AP_WRAP, 0> >",
+    "stores": {
+      "L": 11
+    },
+    "total_instructions": 277
+  },
+  "2": {
+    "basicblocks": 11864,
+    "calls": "5 5 5 5 5 5 5 5",
+    "file": "encode.cpp",
+    "fileloc": 135,
+    "instructions": 23873,
+    "loads": {
+      "L": 736
+    },
+    "name": "conv3",
+    "stores": {
+      "L": 198
+    },
+    "total_instructions": 24009
+  },
+  "3": {
+    "basicblocks": 5,
+    "calls": "1",
+    "file": "encode.cpp",
+    "fileloc": 143,
+    "instructions": 15,
+    "name": "pool1",
+    "total_instructions": 292
+  },
+  "4": {
+    "basicblocks": 23584,
+    "calls": "5 5 5 5 5 5 5 5",
+    "file": "encode.cpp",
+    "fileloc": 129,
+    "instructions": 47441,
+    "loads": {
+      "L": 1472
+    },
+    "name": "conv2",
+    "stores": {
+      "L": 374
+    },
+    "total_instructions": 47577
+  },
+  "5": {
+    "basicblocks": 10,
+    "calls": "",
+    "file": "activation.h",
+    "fileloc": 7,
+    "instructions": 17,
+    "loads": {
+      "L": 2
+    },
+    "name": "relu",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 17
+  },
+  "6": {
+    "basicblocks": 5,
+    "calls": "1",
+    "file": "encode.cpp",
+    "fileloc": 155,
+    "instructions": 15,
+    "name": "pool3",
+    "total_instructions": 292
+  },
+  "7": {
+    "basicblocks": 3081,
+    "calls": "5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5",
+    "file": "encode.cpp",
+    "fileloc": 123,
+    "instructions": 6171,
+    "loads": {
+      "L": 164
+    },
+    "name": "conv1",
+    "stores": {
+      "L": 68
+    },
+    "total_instructions": 6443
+  },
+  "8": {
+    "basicblocks": 5,
+    "calls": "1",
+    "file": "encode.cpp",
+    "fileloc": 149,
+    "instructions": 15,
+    "name": "pool2",
+    "total_instructions": 292
+  }
+}

@@ -1,0 +1,10 @@
+{
+"fifo_info" : [
+{"inst" : "AESL_inst_encode.conv1_out_U", "depth" : 1, "input_block" : 0, "output_block" : 1, "work_scenario" : 3, "chan_type" : 0},
+{"inst" : "AESL_inst_encode.pool1_out_U", "depth" : 1, "input_block" : 0, "output_block" : 1, "work_scenario" : 3, "chan_type" : 0},
+{"inst" : "AESL_inst_encode.conv2_out_U", "depth" : 1, "input_block" : 0, "output_block" : 1, "work_scenario" : 3, "chan_type" : 0},
+{"inst" : "AESL_inst_encode.pool2_out_U", "depth" : 1, "input_block" : 0, "output_block" : 1, "work_scenario" : 3, "chan_type" : 0},
+{"inst" : "AESL_inst_encode.conv3_out_U", "depth" : 1, "input_block" : 0, "output_block" : 1, "work_scenario" : 3, "chan_type" : 0},
+],
+"lat_total" : 15056
+}

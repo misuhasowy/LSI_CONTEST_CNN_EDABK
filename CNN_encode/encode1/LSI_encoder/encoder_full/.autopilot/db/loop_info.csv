@@ -1,0 +1,6 @@
+conv1_U0,CHeight_CWidth,upc_loop_status1.csv
+pool1_U0,PHeight_PWidth,upc_loop_status2.csv
+conv2_U0,CHeight_CWidth,upc_loop_status3.csv
+pool2_U0,PHeight_PWidth,upc_loop_status4.csv
+conv3_U0,CHeight_CWidth,upc_loop_status5.csv
+pool3_U0,PHeight_PWidth,upc_loop_status6.csv

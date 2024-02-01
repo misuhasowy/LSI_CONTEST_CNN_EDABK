@@ -1,0 +1,11 @@
+{
+"fifo_info" : [
+{"inst" : "AESL_inst_decode.conv4_out_U", "depth" : 2, "input_block" : 1, "output_block" : 1, "work_scenario" : 6, "chan_type" : 0},
+{"inst" : "AESL_inst_decode.upsamp4_out_U", "depth" : 2, "input_block" : 1, "output_block" : 1, "work_scenario" : 6, "chan_type" : 0},
+{"inst" : "AESL_inst_decode.conv5_out_U", "depth" : 2, "input_block" : 1, "output_block" : 1, "work_scenario" : 6, "chan_type" : 0},
+{"inst" : "AESL_inst_decode.upsamp5_out_U", "depth" : 2, "input_block" : 1, "output_block" : 1, "work_scenario" : 6, "chan_type" : 0},
+{"inst" : "AESL_inst_decode.conv6_out_U", "depth" : 2, "input_block" : 1, "output_block" : 1, "work_scenario" : 6, "chan_type" : 0},
+{"inst" : "AESL_inst_decode.upsamp6_out_U", "depth" : 2, "input_block" : 1, "output_block" : 1, "work_scenario" : 6, "chan_type" : 0},
+],
+"lat_total" : 15116
+}

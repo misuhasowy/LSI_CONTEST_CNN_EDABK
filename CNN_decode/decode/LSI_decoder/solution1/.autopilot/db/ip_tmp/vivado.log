@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Jan 31 18:26:34 2024
+# Process ID: 10392
+# Current directory: C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/.autopilot/db/ip_tmp
+# Command line: vivado.exe -notrace -log vivado.log -mode batch -source run_vivado_gen_ip.tcl
+# Log file: C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/.autopilot/db/ip_tmp/vivado.log
+# Journal file: C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/.autopilot/db/ip_tmp\vivado.jou
+# Running On: Admin-PC, OS: Windows, CPU Frequency: 2808 MHz, CPU Physical cores: 4, Host memory: 16724 MB
+#-----------------------------------------------------------
+source run_vivado_gen_ip.tcl -notrace
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/.autopilot/db/ip_tmp'
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 426.348 ; gain = 162.176
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'decode_dadd_64ns_64ns_64_7_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'decode_dadd_64ns_64ns_64_7_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'decode_dadd_64ns_64ns_64_7_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'decode_ddiv_64ns_64ns_64_59_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'decode_ddiv_64ns_64ns_64_59_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'decode_ddiv_64ns_64ns_64_59_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'decode_fexp_32ns_32ns_32_10_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'decode_fexp_32ns_32ns_32_10_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'decode_fexp_32ns_32ns_32_10_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'decode_fpext_32ns_64_2_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'decode_fpext_32ns_64_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'decode_fpext_32ns_64_2_no_dsp_1_ip'...
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 31 18:27:07 2024...

@@ -1,0 +1,133 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'decode'" level="0">
+<item name = "Date">Wed Jan 31 18:24:40 2024
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">LSI_decoder</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z010i-clg225-1L</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 8.223 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">14928, 14928, 0.149 ms, 0.149 ms, 14619, 14619, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="conv4_U0">conv4, 362, 362, 3.620 us, 3.620 us, 362, 362, no</column>
+<column name="upsamp4_U0">upsamp4, 521, 521, 5.210 us, 5.210 us, 521, 521, no</column>
+<column name="conv5_U0">conv5, 874, 874, 8.740 us, 8.740 us, 874, 874, no</column>
+<column name="upsamp5_U0">upsamp5, 2057, 2057, 20.570 us, 20.570 us, 2057, 2057, no</column>
+<column name="conv6_U0">conv6, 4171, 4171, 41.710 us, 41.710 us, 4171, 4171, no</column>
+<column name="upsamp6_U0">upsamp6, 12561, 12561, 0.126 ms, 0.126 ms, 12561, 12561, no</column>
+<column name="conv7_U0">conv7, 14618, 14618, 0.146 ms, 0.146 ms, 14618, 14618, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 2, -</column>
+<column name="FIFO">-, -, 594, 408, -</column>
+<column name="Instance">9, 1695, 574162, 342711, 0</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, -, -, -</column>
+<specialColumn name="Available">120, 80, 35200, 17600, 0</specialColumn>
+<specialColumn name="Utilization (%)">7, 2118, 1632, 1949, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="conv4_U0">conv4, 0, 467, 132160, 85354, 0</column>
+<column name="conv5_U0">conv5, 0, 498, 138623, 88939, 0</column>
+<column name="conv6_U0">conv6, 0, 586, 221464, 133764, 0</column>
+<column name="conv7_U0">conv7, 0, 144, 77193, 32759, 0</column>
+<column name="upsamp4_U0">upsamp4, 3, 0, 1102, 496, 0</column>
+<column name="upsamp5_U0">upsamp5, 3, 0, 1130, 497, 0</column>
+<column name="upsamp6_U0">upsamp6, 3, 0, 2490, 902, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="conv4_out_U">0, 99, 0, -, 2, 40, 80</column>
+<column name="conv5_out_U">0, 99, 0, -, 2, 40, 80</column>
+<column name="conv6_out_U">0, 99, 0, -, 2, 40, 80</column>
+<column name="upsamp4_out_U">0, 99, 0, -, 2, 40, 80</column>
+<column name="upsamp5_out_U">0, 99, 0, -, 2, 40, 80</column>
+<column name="upsamp6_out_U">0, 99, 0, -, 2, 40, 80</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="full_in_TDATA">in, 40, axis, full_in, pointer</column>
+<column name="full_in_TVALID">in, 1, axis, full_in, pointer</column>
+<column name="full_in_TREADY">out, 1, axis, full_in, pointer</column>
+<column name="full_out_TDATA">out, 40, axis, full_out, pointer</column>
+<column name="full_out_TVALID">out, 1, axis, full_out, pointer</column>
+<column name="full_out_TREADY">in, 1, axis, full_out, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, decode, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, decode, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, decode, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, decode, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, decode, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, decode, return value</column>
+</table>
+</item>
+</section>
+</profile>

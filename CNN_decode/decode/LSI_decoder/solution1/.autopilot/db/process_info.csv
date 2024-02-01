@@ -1,0 +1,8 @@
+,conv4_U0,stalling1.csv,status1.csv
+,upsamp4_U0,stalling2.csv,status2.csv
+,conv5_U0,stalling3.csv,status3.csv
+,upsamp5_U0,stalling4.csv,status4.csv
+,conv6_U0,stalling5.csv,status5.csv
+,upsamp6_U0,stalling6.csv,status6.csv
+,conv7_U0,stalling7.csv,status7.csv
+,AESL_inst_decode,,module_status1.csv

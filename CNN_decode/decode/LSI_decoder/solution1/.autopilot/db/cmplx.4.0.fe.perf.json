@@ -1,0 +1,116 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "2 4 7 3 1 6 5",
+    "file": "decode.cpp",
+    "fileloc": 134,
+    "instructions": 39,
+    "name": "decode",
+    "total_instructions": 25032
+  },
+  "1": {
+    "basicblocks": 82,
+    "calls": "",
+    "file": "decode.cpp",
+    "fileloc": 105,
+    "instructions": 9533,
+    "loads": {
+      "L": 8
+    },
+    "name": "conv6",
+    "stores": {
+      "L": 16
+    },
+    "total_instructions": 9533
+  },
+  "2": {
+    "basicblocks": 99,
+    "calls": "",
+    "file": "decode.cpp",
+    "fileloc": 91,
+    "instructions": 4811,
+    "loads": {
+      "L": 8
+    },
+    "name": "conv4",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 4811
+  },
+  "3": {
+    "basicblocks": 10,
+    "calls": "",
+    "file": "decode.cpp",
+    "fileloc": 124,
+    "instructions": 125,
+    "loads": {
+      "L": 16
+    },
+    "name": "upsamp5",
+    "stores": {
+      "L": 16
+    },
+    "total_instructions": 125
+  },
+  "4": {
+    "basicblocks": 10,
+    "calls": "",
+    "file": "decode.cpp",
+    "fileloc": 120,
+    "instructions": 125,
+    "loads": {
+      "L": 16
+    },
+    "name": "upsamp4",
+    "stores": {
+      "L": 16
+    },
+    "total_instructions": 125
+  },
+  "5": {
+    "basicblocks": 586,
+    "calls": "",
+    "file": "decode.cpp",
+    "fileloc": 112,
+    "instructions": 5143,
+    "loads": {
+      "L": 16
+    },
+    "name": "conv7",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 5143
+  },
+  "6": {
+    "basicblocks": 10,
+    "calls": "",
+    "file": "decode.cpp",
+    "fileloc": 128,
+    "instructions": 221,
+    "loads": {
+      "L": 32
+    },
+    "name": "upsamp6",
+    "stores": {
+      "L": 32
+    },
+    "total_instructions": 221
+  },
+  "7": {
+    "basicblocks": 131,
+    "calls": "",
+    "file": "decode.cpp",
+    "fileloc": 98,
+    "instructions": 5035,
+    "loads": {
+      "L": 8
+    },
+    "name": "conv5",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 5035
+  }
+}

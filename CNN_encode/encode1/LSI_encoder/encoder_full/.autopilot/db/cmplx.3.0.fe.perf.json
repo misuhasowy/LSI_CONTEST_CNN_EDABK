@@ -1,0 +1,65 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "5 2 3 6 1 4",
+    "file": "encode.cpp",
+    "fileloc": 162,
+    "instructions": 31,
+    "name": "encode",
+    "total_instructions": 20250
+  },
+  "1": {
+    "basicblocks": 119,
+    "calls": "",
+    "file": "encode.cpp",
+    "fileloc": 135,
+    "instructions": 4937,
+    "name": "conv3",
+    "total_instructions": 4937
+  },
+  "2": {
+    "basicblocks": 93,
+    "calls": "",
+    "file": "encode.cpp",
+    "fileloc": 143,
+    "instructions": 2181,
+    "name": "pool1",
+    "total_instructions": 2181
+  },
+  "3": {
+    "basicblocks": 343,
+    "calls": "",
+    "file": "encode.cpp",
+    "fileloc": 129,
+    "instructions": 10610,
+    "name": "conv2",
+    "total_instructions": 10610
+  },
+  "4": {
+    "basicblocks": 117,
+    "calls": "",
+    "file": "encode.cpp",
+    "fileloc": 155,
+    "instructions": 490,
+    "name": "pool3",
+    "total_instructions": 490
+  },
+  "5": {
+    "basicblocks": 42,
+    "calls": "",
+    "file": "encode.cpp",
+    "fileloc": 123,
+    "instructions": 1344,
+    "name": "conv1",
+    "total_instructions": 1344
+  },
+  "6": {
+    "basicblocks": 51,
+    "calls": "",
+    "file": "encode.cpp",
+    "fileloc": 149,
+    "instructions": 657,
+    "name": "pool2",
+    "total_instructions": 657
+  }
+}

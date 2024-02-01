@@ -1,0 +1,7 @@
+   Build using "C:/Xilinx/Vitis_HLS/2023.1/tps/win64/msys64/mingw64/bin/g++"
+   Compiling apatb_encode.cpp
+   Compiling encode.cpp_pre.cpp.tb.cpp
+   Compiling apatb_encode_util.cpp
+   Compiling encode_test.cpp_pre.cpp.tb.cpp
+   Compiling apatb_encode_ir.ll
+   Generating cosim.tv.exe
