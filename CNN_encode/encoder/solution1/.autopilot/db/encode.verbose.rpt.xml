@@ -1,0 +1,148 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'encode'" level="0">
+<item name = "Date">Tue Feb 27 17:37:54 2024
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
+<item name = "Project">SoC</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu7ev-ffvc1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.265 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">14404, 14404, 0.144 ms, 0.144 ms, 14404, 14404, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="castIn_U0">castIn, 786, 786, 7.860 us, 7.860 us, 786, 786, no</column>
+<column name="conv1_U0">conv1, 14403, 14403, 0.144 ms, 0.144 ms, 14403, 14403, no</column>
+<column name="pool1_U0">pool1, 12547, 12547, 0.125 ms, 0.125 ms, 12547, 12547, no</column>
+<column name="conv2_U0">conv2, 4119, 4119, 41.190 us, 41.190 us, 4119, 4119, no</column>
+<column name="pool2_U0">pool2, 1571, 1571, 15.710 us, 15.710 us, 1571, 1571, no</column>
+<column name="conv3_U0">conv3, 663, 663, 6.630 us, 6.630 us, 663, 663, no</column>
+<column name="pool3_U0">pool3, 523, 523, 5.230 us, 5.230 us, 523, 523, no</column>
+<column name="castOut_U0">castOut, 131, 131, 1.310 us, 1.310 us, 131, 131, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 2, -</column>
+<column name="FIFO">-, -, 693, 469, -</column>
+<column name="Instance">-, 3749, 194849, 225552, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, -, -, -</column>
+<specialColumn name="Available">624, 1728, 460800, 230400, 96</specialColumn>
+<specialColumn name="Utilization (%)">0, 216, 42, 98, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="castIn_U0">castIn, 0, 0, 46, 99, 0</column>
+<column name="castOut_U0">castOut, 0, 0, 13, 88, 0</column>
+<column name="conv1_U0">conv1, 0, 290, 9639, 14155, 0</column>
+<column name="conv2_U0">conv2, 0, 2306, 106834, 108444, 0</column>
+<column name="conv3_U0">conv3, 0, 1153, 51214, 59100, 0</column>
+<column name="pool1_U0">pool1, 0, 0, 15938, 28582, 0</column>
+<column name="pool2_U0">pool2, 0, 0, 4403, 5869, 0</column>
+<column name="pool3_U0">pool3, 0, 0, 6762, 9215, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="conv1_out_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="conv2_out_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="conv3_out_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="full_in_float_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="full_out_float_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pool1_out_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="pool2_out_U">0, 99, 0, -, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="full_in_AXI_TDATA">in, 32, axis, full_in_AXI_V_data_V, pointer</column>
+<column name="full_in_AXI_TKEEP">in, 4, axis, full_in_AXI_V_keep_V, pointer</column>
+<column name="full_in_AXI_TSTRB">in, 4, axis, full_in_AXI_V_strb_V, pointer</column>
+<column name="full_in_AXI_TUSER">in, 2, axis, full_in_AXI_V_user_V, pointer</column>
+<column name="full_in_AXI_TLAST">in, 1, axis, full_in_AXI_V_last_V, pointer</column>
+<column name="full_in_AXI_TID">in, 5, axis, full_in_AXI_V_id_V, pointer</column>
+<column name="full_in_AXI_TDEST">in, 6, axis, full_in_AXI_V_dest_V, pointer</column>
+<column name="full_in_AXI_TVALID">in, 1, axis, full_in_AXI_V_dest_V, pointer</column>
+<column name="full_in_AXI_TREADY">out, 1, axis, full_in_AXI_V_dest_V, pointer</column>
+<column name="full_out_AXI_TDATA">out, 32, axis, full_out_AXI_V_data_V, pointer</column>
+<column name="full_out_AXI_TKEEP">out, 4, axis, full_out_AXI_V_keep_V, pointer</column>
+<column name="full_out_AXI_TSTRB">out, 4, axis, full_out_AXI_V_strb_V, pointer</column>
+<column name="full_out_AXI_TUSER">out, 2, axis, full_out_AXI_V_user_V, pointer</column>
+<column name="full_out_AXI_TLAST">out, 1, axis, full_out_AXI_V_last_V, pointer</column>
+<column name="full_out_AXI_TID">out, 5, axis, full_out_AXI_V_id_V, pointer</column>
+<column name="full_out_AXI_TDEST">out, 6, axis, full_out_AXI_V_dest_V, pointer</column>
+<column name="full_out_AXI_TVALID">out, 1, axis, full_out_AXI_V_dest_V, pointer</column>
+<column name="full_out_AXI_TREADY">in, 1, axis, full_out_AXI_V_dest_V, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, encode, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, encode, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, encode, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, encode, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, encode, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, encode, return value</column>
+</table>
+</item>
+</section>
+</profile>

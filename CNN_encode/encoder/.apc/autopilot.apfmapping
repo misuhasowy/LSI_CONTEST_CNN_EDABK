@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="encode.cpp" path="/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_encode/encode1/encode.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="encode_test.cpp" path="/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_encode/encode1/encode_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,35 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "encode",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/edabk\/Downloads\/son\/LSI_CONTEST_CNN_EDABK\/CNN_encode\/encode1\/SoC\/solution1\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "encode"
+              }]
+          }
+        },
+        {
+          "functionName": "encode",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "\/home\/edabk\/Downloads\/son\/LSI_CONTEST_CNN_EDABK\/CNN_encode\/encode1\/SoC\/solution1\/csynth.tcl",
+          "sourceLine": "15",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "encode"
+              }]
+          }
+        }
+      ]
+    }]}
