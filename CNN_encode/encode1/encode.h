@@ -2,12 +2,11 @@
 #ifndef ENCODE_H
 #define ENCODE_H
 
-#include <hls_stream.h>
 #include <stdint.h>
-#include "ap_fixed.h"
+#include "type.h"
 
-
-typedef ap_fixed<40,10> data_t;
-void encode(hls::stream<data_t> &full_in, hls::stream<data_t> &full_out);
+void encode(hls::stream<axis_dtype> &full_in, hls::stream<axis_dtype> &full_out);
+void castIn(hls::stream<axis_dtype> &input_stream_axis, hls::stream<data_t> &input_stream_fixed);
+void castOut(hls::stream<data_t> &output_stream_fixed, hls::stream<axis_dtype> &output_stream_axis);
 
 #endif

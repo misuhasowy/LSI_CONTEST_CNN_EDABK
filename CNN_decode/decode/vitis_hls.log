@@ -1,277 +1,279 @@
-ECHO is off.
-ECHO is off.
-NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
-INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'ADMIN' on host 'admin-pc' (Windows NT_amd64 version 6.2) on Wed Jan 31 18:25:52 +0700 2024
-INFO: [HLS 200-10] In directory 'C:/Users/ADMIN/GithubClonedRepo/decode'
-Sourcing Tcl script 'C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/cosim.tcl'
-INFO: [HLS 200-1510] Running: source C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/cosim.tcl
-INFO: [HLS 200-1510] Running: open_project LSI_decoder 
-INFO: [HLS 200-10] Opening project 'C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder'.
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'edabk' on host 'edabk-HP-280-Pro-G8-Microtower-PC' (Linux_x86_64 version 5.15.0-97-generic) on Tue Feb 27 15:37:34 +07 2024
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode'
+Sourcing Tcl script '/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/cosim.tcl'
+INFO: [HLS 200-1510] Running: source /home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/cosim.tcl
+INFO: [HLS 200-1510] Running: open_project decode_11 
+INFO: [HLS 200-10] Opening project '/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11'.
 INFO: [HLS 200-1510] Running: set_top decode 
-INFO: [HLS 200-1510] Running: add_files activation.h 
-INFO: [HLS 200-10] Adding design file 'activation.h' to the project
 INFO: [HLS 200-1510] Running: add_files decode.cpp 
 INFO: [HLS 200-10] Adding design file 'decode.cpp' to the project
-INFO: [HLS 200-1510] Running: add_files decode.h 
-INFO: [HLS 200-10] Adding design file 'decode.h' to the project
-INFO: [HLS 200-1510] Running: add_files defines.h 
-INFO: [HLS 200-10] Adding design file 'defines.h' to the project
-INFO: [HLS 200-1510] Running: add_files input_decode.h 
-INFO: [HLS 200-10] Adding design file 'input_decode.h' to the project
-INFO: [HLS 200-1510] Running: add_files weights.h 
-INFO: [HLS 200-10] Adding design file 'weights.h' to the project
-INFO: [HLS 200-1510] Running: add_files -tb decode_test.cpp 
+INFO: [HLS 200-1510] Running: add_files -tb decode_test.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'decode_test.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
-INFO: [HLS 200-10] Opening solution 'C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1'.
+INFO: [HLS 200-10] Opening solution '/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-INFO: [HLS 200-1611] Setting target device to 'xc7z010i-clg225-1L'
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
 INFO: [HLS 200-1505] Using flow_target 'vivado'
-Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
-INFO: [HLS 200-1464] Running solution command: config_cosim -disable_deadlock_detection=1
-INFO: [HLS 200-1464] Running solution command: config_cosim -enable_dataflow_profiling=1
-INFO: [HLS 200-1464] Running solution command: config_cosim -enable_fifo_sizing=1
-INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
-INFO: [HLS 200-1464] Running solution command: config_cosim -trace_level=all
-INFO: [HLS 200-1464] Running solution command: config_cosim -wave_debug=1
-INFO: [HLS 200-1510] Running: set_part xc7z010iclg225-1L 
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_compile -complex-mul-dsp=0
+INFO: [HLS 200-1464] Running solution command: config_compile -name_max_length=25
+INFO: [XFORM 203-1161] The maximum of name length is set to 25.
+INFO: [HLS 200-1464] Running solution command: config_dataflow -strict_mode=error
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
+INFO: [XFORM 203-1161] The maximum of name length is set to 25.
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-INFO: [HLS 200-1510] Running: config_cosim -disable_deadlock_detection -enable_dataflow_profiling -enable_fifo_sizing -tool xsim -trace_level all -wave_debug 
-INFO: [HLS 200-1510] Running: cosim_design -wave_debug -disable_deadlock_detection -enable_dataflow_profiling -enable_fifo_sizing -trace_level all 
+INFO: [HLS 200-1510] Running: config_compile -name_max_length 25 
+INFO: [XFORM 203-1161] The maximum of name length is set to 25.
+INFO: [HLS 200-1510] Running: config_dataflow -strict_mode error 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./decode_11/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name decode decode 
+INFO: [HLS 200-1510] Running: cosim_design -trace_level all 
 INFO: [COSIM 212-47] Using XSIM for RTL simulation.
 INFO: [COSIM 212-14] Instrumenting C test bench ...
-   Build using "C:/Xilinx/Vitis_HLS/2023.1/tps/win64/msys64/mingw64/bin/g++"
-   Compiling apatb_decode_util.cpp
-   Compiling decode_test.cpp_pre.cpp.tb.cpp
-   Compiling apatb_decode.cpp
+   Build using "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/bin/g++"
    Compiling decode.cpp_pre.cpp.tb.cpp
+   Compiling apatb_decode.cpp
+   Compiling decode_test.cpp_pre.cpp.tb.cpp
+   Compiling apatb_decode_util.cpp
    Compiling apatb_decode_ir.ll
    Generating cosim.tv.exe
 INFO: [COSIM 212-302] Starting C TB testing ... 
-2.56673e-05	7.25593e-06	1.08965e-07	2.51457e-08	8.3819e-09	6.51926e-09	9.31323e-10	9.31323e-10	9.31323e-10	0	0	0	0	9.31323e-10	0	0	0	5.58794e-09	2.79397e-09	1.86265e-09	3.44589e-08	1.10827e-07	4.32134e-07	2.40281e-07	3.76254e-07	1.24518e-06	8.60542e-07	3.57162e-06	 
-7.63685e-08	1.49012e-08	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	7.83242e-07	 
-6.0536e-08	6.23986e-08	6.51926e-09	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	9.31323e-10	3.72529e-09	6.51926e-09	5.20796e-06	 
-7.72998e-08	8.75443e-08	7.35745e-08	1.30385e-08	8.3819e-09	1.86265e-09	9.31323e-10	9.31323e-10	9.31323e-10	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2.79397e-09	1.49012e-08	2.04146e-06	 
-6.51926e-08	1.10641e-06	2.95136e-06	3.5651e-06	7.22706e-06	6.48107e-06	6.56489e-06	3.81283e-06	1.43703e-06	1.35973e-07	4.74975e-08	1.58325e-08	7.45058e-09	1.21072e-08	5.58794e-09	9.31323e-10	0	0	0	2.79397e-09	3.72529e-09	7.45058e-09	5.58794e-09	2.79397e-09	2.79397e-09	2.79397e-08	8.19564e-08	2.52388e-06	 
-3.60422e-07	6.98771e-06	2.02972e-05	5.15999e-05	0.000428335	0.00260621	0.00411865	0.00368026	0.0016814	0.000320151	0.00013253	6.35749e-05	7.05943e-05	2.80263e-05	7.98143e-06	9.22941e-07	5.15953e-07	5.17815e-07	4.44241e-07	6.10016e-07	4.82425e-07	9.1549e-07	3.69735e-07	8.47504e-08	4.56348e-08	1.07102e-07	8.10251e-08	2.63657e-06	 
-6.14673e-08	8.50298e-07	4.07919e-06	2.69869e-05	0.000854868	0.0231272	0.0800241	0.154245	0.0981301	0.0212992	0.00899098	0.00448354	0.00422767	0.00183316	0.00117996	0.000258274	0.000154124	0.000165002	0.000186614	0.000215996	0.000113781	0.000190567	4.21843e-05	1.55251e-06	3.92087e-07	4.83356e-07	1.94646e-07	3.55765e-06	 
-8.6613e-08	1.26194e-06	2.48943e-06	1.63978e-05	0.000846657	0.052266	0.451617	0.80742	0.804476	0.546033	0.362893	0.195401	0.181288	0.15011	0.175767	0.128562	0.0687783	0.0381429	0.0617457	0.0714933	0.0206494	0.00904376	0.000243751	2.8694e-06	1.45938e-06	6.6217e-07	1.08965e-07	2.18861e-06	 
-1.4659e-06	2.61702e-05	1.23428e-05	2.31788e-05	0.000673553	0.0482253	0.577074	0.912559	0.947124	0.884085	0.798298	0.725792	0.741183	0.78853	0.801667	0.787249	0.675356	0.549348	0.660781	0.75752	0.445289	0.0462138	0.000370772	5.68572e-06	7.10227e-06	1.4361e-06	1.95578e-07	2.51085e-06	 
-3.44031e-06	1.6056e-05	6.0834e-06	1.73543e-05	0.000322301	0.0167588	0.213181	0.671281	0.813668	0.621339	0.512527	0.540994	0.582725	0.650525	0.677373	0.575951	0.464981	0.475874	0.718636	0.925262	0.877372	0.304835	0.00280248	2.46093e-05	1.47959e-05	7.56234e-07	7.72998e-08	7.71135e-07	 
-1.16229e-06	3.88641e-06	2.06288e-06	7.00448e-06	5.96829e-05	0.00110199	0.0106348	0.0618807	0.129468	0.0747635	0.0890778	0.12307	0.138683	0.144824	0.162257	0.119657	0.131363	0.266794	0.612446	0.941318	0.929541	0.447404	0.00455835	4.18853e-05	1.69501e-05	7.73929e-07	9.22009e-08	8.8755e-07	 
-1.44262e-06	3.03239e-06	3.53344e-06	1.22404e-05	2.81511e-05	0.000176392	0.000522621	0.00175486	0.00312368	0.0024413	0.00499785	0.0140587	0.0192378	0.0251388	0.0301644	0.020892	0.0395089	0.131448	0.575153	0.950561	0.878928	0.200952	0.00242521	3.65805e-05	2.06456e-05	5.16884e-07	7.91624e-08	1.3262e-06	 
-3.42261e-06	5.05149e-06	1.013e-05	1.0075e-05	6.44196e-06	1.21482e-05	1.09589e-05	3.01609e-05	6.53025e-05	0.000179254	0.000694497	0.00288802	0.00444383	0.00617585	0.00872951	0.012073	0.045667	0.242082	0.804095	0.938393	0.517992	0.0171202	0.000223739	1.11619e-05	1.33151e-05	2.1141e-07	4.74975e-08	1.00397e-06	 
-4.08385e-06	3.80166e-06	4.94067e-06	1.3439e-06	7.62753e-07	4.08851e-07	3.00817e-07	1.03936e-06	3.65265e-06	2.38335e-05	0.000116168	0.000805558	0.00189266	0.00375824	0.00816964	0.0184782	0.0953891	0.601757	0.913501	0.793631	0.0722362	0.00056874	1.90092e-05	2.81539e-06	3.66475e-06	1.67638e-07	3.63216e-08	4.10713e-07	 
-4.22075e-06	1.27312e-06	3.29688e-07	4.19095e-08	1.67638e-08	7.45058e-09	9.31323e-09	3.63216e-08	1.42492e-07	1.16881e-06	1.40853e-05	0.000194261	0.00118562	0.00657628	0.0239489	0.0986424	0.476707	0.888336	0.900561	0.323244	0.00580311	6.01048e-05	3.51202e-06	1.37277e-06	3.72063e-06	2.98023e-07	5.86733e-08	4.57279e-07	 
-8.48901e-06	9.78354e-06	3.54368e-06	4.56348e-07	9.68575e-08	1.95578e-08	8.3819e-09	4.65661e-09	1.11759e-08	1.95578e-07	4.57373e-06	5.03128e-05	0.000216537	0.00156805	0.0265795	0.464576	0.928892	0.964447	0.74092	0.0281433	0.000787293	1.01915e-05	1.57673e-06	3.35369e-06	1.13202e-05	1.02539e-06	1.30385e-07	1.95578e-06	 
-1.92029e-05	8.23382e-06	1.66055e-06	8.3819e-08	8.3819e-09	9.31323e-10	0	0	9.31323e-10	5.12227e-08	1.2666e-06	7.69738e-06	2.84826e-05	0.000456788	0.0494275	0.774767	0.957348	0.880263	0.148499	0.00249916	0.000247071	4.6771e-06	2.33389e-06	3.20002e-06	5.50225e-06	1.2489e-06	1.36904e-07	3.78955e-06	 
-9.05804e-06	1.41282e-06	9.12696e-08	9.31323e-10	0	0	0	0	0	3.35276e-08	1.11759e-06	4.98164e-06	3.20636e-05	0.00261399	0.239463	0.940601	0.974923	0.599987	0.018415	0.000405362	5.77653e-05	1.35228e-06	9.40636e-07	1.13156e-06	3.06033e-06	3.49712e-06	6.67758e-07	1.8239e-05	 
-4.44055e-06	3.65078e-07	2.04891e-08	0	0	0	0	0	0	4.56348e-08	2.35531e-06	2.47881e-05	0.000553125	0.0625513	0.76873	0.978124	0.934325	0.0938898	0.00121215	4.39007e-05	1.83042e-05	1.6503e-06	4.56441e-06	1.00983e-05	1.92039e-05	1.6883e-05	5.52926e-06	7.66926e-05	 
-6.50529e-06	1.20141e-06	8.9407e-08	4.65661e-09	2.79397e-09	1.86265e-09	9.31323e-10	1.86265e-09	1.86265e-09	5.21541e-08	2.36556e-06	5.87432e-05	0.00462136	0.384037	0.963512	0.962457	0.426445	0.00239425	8.11033e-05	2.78689e-05	2.97436e-05	5.07571e-06	3.49786e-05	3.41572e-05	1.44737e-05	9.22941e-06	2.32272e-06	5.26281e-05	 
-1.07847e-05	1.8999e-06	4.37722e-08	5.58794e-09	2.6077e-08	8.10251e-08	6.0536e-08	3.35276e-08	2.14204e-08	2.15136e-07	1.71531e-05	0.000695655	0.0744733	0.847997	0.976506	0.722616	0.0243621	0.000125993	1.46069e-05	1.23847e-05	1.34772e-05	1.80304e-06	1.24238e-05	1.41189e-05	9.54606e-06	1.08844e-05	2.48477e-06	8.78805e-05	 
-2.25063e-05	3.84543e-06	5.02914e-08	6.51926e-09	1.02445e-07	7.76723e-07	7.92556e-07	2.70084e-07	2.58908e-07	4.58024e-06	0.000308364	0.0103105	0.509826	0.974056	0.963409	0.204515	0.00150132	1.11898e-05	3.29688e-06	2.33669e-06	1.58884e-06	4.20026e-07	2.31992e-06	2.38325e-06	4.5849e-06	4.4005e-06	1.47987e-06	5.2264e-05	 
-1.80062e-05	3.36953e-06	4.74975e-08	4.65661e-09	1.37836e-07	1.98465e-06	1.68011e-06	7.42264e-07	2.16998e-06	6.2868e-05	0.00303798	0.0797182	0.862017	0.977183	0.808461	0.0117772	5.02141e-05	6.31437e-07	4.94532e-07	3.29688e-07	1.71363e-07	7.35745e-08	3.0268e-07	4.34928e-07	1.49943e-06	2.17464e-06	8.47504e-07	3.31076e-05	 
-2.20835e-05	3.85195e-06	4.93601e-08	2.79397e-09	2.6077e-08	1.4063e-07	1.2666e-07	2.05822e-07	1.56835e-06	6.93286e-05	0.00764591	0.431861	0.97467	0.94404	0.20621	0.00107414	1.34017e-05	3.27826e-07	2.03028e-07	1.89058e-07	2.37487e-07	1.63913e-07	7.58097e-07	1.16602e-06	4.04194e-06	3.95533e-06	1.10641e-06	6.17215e-05	 
-1.14199e-05	3.90504e-06	4.19095e-08	1.86265e-09	3.63216e-08	8.19564e-08	8.56817e-08	1.47149e-07	1.22935e-06	0.000107421	0.0304286	0.774871	0.985607	0.889664	0.0728935	0.000545573	1.08583e-05	1.53668e-07	5.96046e-08	5.21541e-08	6.14673e-08	1.49943e-07	9.24803e-07	1.61026e-06	4.1835e-06	4.01959e-06	1.53482e-06	0.000173285	 
-3.41842e-05	1.80267e-05	1.47149e-07	1.86265e-09	1.68569e-07	8.39122e-07	4.69387e-07	5.4948e-07	3.95533e-06	0.000749733	0.152449	0.944181	0.987396	0.711269	0.0393448	0.000320519	8.03079e-06	6.23986e-08	8.3819e-09	1.30385e-08	5.21541e-08	5.4203e-07	5.09061e-06	5.51343e-06	7.26338e-06	2.06567e-06	1.21538e-06	0.000165361	 
-3.79141e-05	1.32071e-05	1.55531e-07	4.65661e-09	1.13156e-06	1.8537e-05	6.16163e-06	6.19236e-06	2.75206e-05	0.00212343	0.241052	0.911223	0.940211	0.261166	0.0124443	0.000379016	2.71853e-05	1.78814e-07	7.45058e-09	1.30385e-08	6.23986e-08	9.09902e-07	9.82452e-06	6.60866e-06	3.51295e-06	4.24683e-07	1.68569e-07	2.24365e-05	 
-1.14553e-05	1.23587e-06	2.04891e-08	1.30385e-08	4.42658e-06	1.15139e-05	1.07586e-05	3.03239e-05	0.00011572	0.00521863	0.0851168	0.333569	0.27679	0.0426522	0.00650523	0.0005831	0.000115279	1.13994e-06	1.06171e-07	6.42613e-08	9.77889e-08	1.0645e-06	5.02262e-06	3.77372e-06	1.58418e-06	1.69501e-07	9.59262e-08	7.28853e-06	 
-WARNING [HLS SIM]: hls::stream 'src_img' contains leftover data, which may result in RTL simulation hanging.
-INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 12544
+1722	486	7	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	7	29	16	25	83	57	239	 
+5	1	0	0	0	0	0	0	0	0	0	0	67108863	67108863	67108863	67108863	67108863	67108863	67108863	0	0	0	0	0	0	0	0	52	 
+4	4	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	349	 
+5	5	4	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	137	 
+4	74	198	239	485	434	440	255	96	9	3	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	5	169	 
+24	468	1362	3462	28745	174900	276399	246979	112837	21485	8894	4266	4737	1880	535	61	34	34	29	40	32	61	24	5	3	7	5	176	 
+4	57	273	1811	57369	1552046	5370352	10351267	6585430	1429368	603377	300887	283716	123022	79187	17332	10343	11073	12523	14495	7635	12788	2830	104	26	32	13	238	 
+5	84	167	1100	56818	3507522	30307577	54185055	53987472	36643601	24353329	13113178	12166069	10073742	11795621	8627685	4615661	2559742	4143691	4797842	1385763	606919	16358	192	97	44	7	146	 
+98	1756	828	1555	45201	3236350	38726850	61240789	63560429	59329917	53572837	48706985	49739933	52917344	53798991	52831396	45322330	36866073	44344158	50836270	29882854	3101363	24882	381	476	96	13	168	 
+230	1077	408	1164	21629	1124664	14306414	45048934	54604360	41697346	34395057	36305421	39105983	43655980	45457705	38651397	31204276	31935251	48226724	62093259	58879402	20457154	188072	1651	992	50	5	51	 
+78	260	138	470	4005	73953	713695	4152786	8688486	5017325	5977935	8259085	9306816	9718976	10888886	8030081	8815593	17904191	41100438	63170773	62380455	30024887	305908	2810	1137	51	6	59	 
+96	203	237	821	1889	11837	35073	117768	209628	163833	335402	943463	1291030	1687035	2024309	1402046	2651407	8821285	38597741	63791029	58983809	13485725	162754	2454	1385	34	5	89	 
+229	339	679	676	432	815	735	2024	4382	12029	46607	193813	298221	414455	585830	810209	3064664	16245761	53961756	62974447	34761842	1148920	15015	749	893	14	3	67	 
+274	255	331	90	51	27	20	69	245	1599	7796	54060	127014	252212	548257	1240053	6401452	40383133	61303955	53259648	4847699	38167	1275	188	245	11	2	27	 
+283	85	22	2	1	0	0	2	9	78	945	13036	79565	441327	1607188	6619770	31991185	59615184	60435571	21692566	389441	4033	235	92	249	20	3	30	 
+569	656	237	30	6	1	0	0	0	13	306	3376	14531	105230	1783720	31177097	62336867	64722954	49722261	1888676	52834	683	105	225	759	68	8	131	 
+1288	552	111	5	0	0	0	0	0	3	85	516	1911	30654	3317024	51993650	64246545	59073458	9965615	167716	16580	313	156	214	369	83	9	254	 
+607	94	6	0	0	0	0	0	0	2	75	334	2151	175421	16070056	63122676	65425968	40264425	1235810	27203	3876	90	63	75	205	234	44	1224	 
+298	24	1	0	0	0	0	0	0	3	158	1663	37119	4197727	51588531	65640788	62701463	6300841	81346	2946	1228	110	306	677	1288	1133	371	5146	 
+436	80	6	0	0	0	0	0	0	3	158	3942	310133	25772169	64660199	64589352	28618172	160675	5442	1870	1996	340	2347	2292	971	619	155	3531	 
+723	127	2	0	1	5	4	2	1	14	1151	46684	4997811	56908058	65532229	48493823	1634906	8455	980	831	904	121	833	947	640	730	166	5897	 
+1510	258	3	0	6	52	53	18	17	307	20694	691934	34213842	65367807	64653237	13724682	100751	750	221	156	106	28	155	159	307	295	99	3507	 
+1208	226	3	0	9	133	112	49	145	4219	203877	5349824	57848991	65577659	54254861	790351	3369	42	33	22	11	4	20	29	100	145	56	2221	 
+1482	258	3	0	1	9	8	13	105	4652	513112	28981717	65408961	63353464	13838494	72084	899	22	13	12	15	11	50	78	271	265	74	4142	 
+766	262	2	0	2	5	5	9	82	7208	2042035	52000673	66142984	59704343	4891798	36612	728	10	4	3	4	10	62	108	280	269	103	11629	 
+2294	1209	9	0	11	56	31	36	265	50314	10230711	63362889	66263044	47732427	2640387	21509	538	4	0	0	3	36	341	370	487	138	81	11097	 
+2544	886	10	0	75	1244	413	415	1846	142501	16176716	61151117	63096498	17526553	835122	25435	1824	12	0	0	4	61	659	443	235	28	11	1505	 
+768	82	1	0	297	772	722	2035	7765	350217	5712112	22385477	18575086	2862355	436560	39131	7736	76	7	4	6	71	337	253	106	11	6	489	 
 INFO: [COSIM 212-333] Generating C post check test bench ...
 INFO: [COSIM 212-12] Generating RTL test bench ...
-ECHO is off.
-ECHO is off.
-
-****** Vivado v2023.1 (64-bit)
-  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
-  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
-  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-
-source run_vivado_gen_ip.tcl -notrace
-INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
-Current project path is 'C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/.autopilot/db/ip_tmp'
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 426.348 ; gain = 162.176
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
-WARNING: [IP_Flow 19-4832] The IP name 'decode_dadd_64ns_64ns_64_7_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'decode_dadd_64ns_64ns_64_7_full_dsp_1_ip'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'decode_dadd_64ns_64ns_64_7_full_dsp_1_ip'...
-WARNING: [IP_Flow 19-4832] The IP name 'decode_ddiv_64ns_64ns_64_59_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'decode_ddiv_64ns_64ns_64_59_no_dsp_1_ip'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'decode_ddiv_64ns_64ns_64_59_no_dsp_1_ip'...
-WARNING: [IP_Flow 19-4832] The IP name 'decode_fexp_32ns_32ns_32_10_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'decode_fexp_32ns_32ns_32_10_full_dsp_1_ip'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'decode_fexp_32ns_32ns_32_10_full_dsp_1_ip'...
-WARNING: [IP_Flow 19-4832] The IP name 'decode_fpext_32ns_64_2_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'decode_fpext_32ns_64_2_no_dsp_1_ip'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'decode_fpext_32ns_64_2_no_dsp_1_ip'...
-INFO: [Common 17-206] Exiting Vivado at Wed Jan 31 18:27:07 2024...
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_vivado_gen_ip.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'decode_fexp_32ns_32ns_32_8_fueOg_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+create_ip: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 2544.758 ; gain = 37.988 ; free physical = 7927 ; free virtual = 13772
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'decode_fexp_32ns_32ns_32_8_fueOg_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'decode_fexp_32ns_32ns_32_8_fueOg_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'decode_fpext_32ns_64_2_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'decode_fpext_32ns_64_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'decode_fpext_32ns_64_2_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'decode_dadd_64ns_64ns_64_5_fufYi_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'decode_dadd_64ns_64ns_64_5_fufYi_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'decode_dadd_64ns_64ns_64_5_fufYi_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'decode_ddiv_64ns_64ns_64_22_ng8j_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'decode_ddiv_64ns_64ns_64_22_ng8j_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'decode_ddiv_64ns_64ns_64_22_ng8j_ip'...
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 27 15:39:22 2024...
 INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
 INFO: [COSIM 212-323] Starting verilog simulation. 
 INFO: [COSIM 212-15] Starting XSIM ...
-
-C:\Users\ADMIN\GithubClonedRepo\decode\LSI_decoder\solution1\sim\verilog>set PATH= 
-
-C:\Users\ADMIN\GithubClonedRepo\decode\LSI_decoder\solution1\sim\verilog>call C:/Xilinx/Vivado/2023.1/bin/xelab xil_defaultlib.apatb_decode_top glbl -Oenable_linking_all_libraries  -prj decode.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_1_15 -L floating_point_v7_0_20 --lib "ieee_proposed=./ieee_proposed" -s decode -debug all 
-ECHO is off.
-ECHO is off.
-Vivado Simulator v2023.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_decode_top glbl -Oenable_linking_all_libraries -prj decode.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_15 -L floating_point_v7_0_20 --lib ieee_proposed=./ieee_proposed -s decode -debug all 
-Multi-threading is on. Using 6 slave threads.
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/ip/xil_defaultlib/decode_dadd_64ns_64ns_64_7_full_dsp_1_ip.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_dadd_64ns_64ns_64_7_full_dsp_1_ip
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/ip/xil_defaultlib/decode_ddiv_64ns_64ns_64_59_no_dsp_1_ip.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_ddiv_64ns_64ns_64_59_no_dsp_1_ip
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/ip/xil_defaultlib/decode_fexp_32ns_32ns_32_10_full_dsp_1_ip.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_fexp_32ns_32ns_32_10_full_dsp_1_ip
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/ip/xil_defaultlib/decode_fpext_32ns_64_2_no_dsp_1_ip.v" into library xil_defaultlib
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_decode_top glbl -Oenable_linking_all_libraries -prj decode.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_20 -L floating_point_v7_1_14 --lib ieee_proposed=./ieee_proposed -s decode -debug wave 
+Multi-threading is on. Using 14 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/ip/xil_defaultlib/decode_fexp_32ns_32ns_32_8_fueOg_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_fexp_32ns_32ns_32_8_fueOg_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/ip/xil_defaultlib/decode_fpext_32ns_64_2_no_dsp_1_ip.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module decode_fpext_32ns_64_2_no_dsp_1_ip
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/ip/xil_defaultlib/decode_dadd_64ns_64ns_64_5_fufYi_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_dadd_64ns_64ns_64_5_fufYi_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/ip/xil_defaultlib/decode_ddiv_64ns_64ns_64_22_ng8j_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_ddiv_64ns_64ns_64_22_ng8j_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/AESL_axi_s_full_in.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_axi_s_full_in
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/AESL_axi_s_full_out.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_axi_s_full_out
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_26s_57_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_26s_57_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_17ns_49_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_17ns_49_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_19ns_51_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_19ns_51_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_25s_56_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_25s_56_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_20ns_51_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_20ns_51_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_start_for_conv4_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_start_for_conv4_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module decode_start_for_conv4_U0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module fifo
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode.autotb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module apatb_decode_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mux_104_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mux_104_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_23ns_54_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_23ns_54_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_17s_49_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_17s_49_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_21s_52_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_21s_52_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_22ns_53_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_22ns_53_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_16ns_48_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_16ns_48_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_castOut.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_castOut
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module decode
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_conv4.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/AESL_deadlock_idx0_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_idx0_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_conv4.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module decode_conv4
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_conv5.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_conv5
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_conv6.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_conv6
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_conv7.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_conv7
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_dadd_64ns_64ns_64_7_full_dsp_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_dadd_64ns_64ns_64_7_full_dsp_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_ddiv_64ns_64ns_64_59_no_dsp_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_ddiv_64ns_64ns_64_59_no_dsp_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_fexp_32ns_32ns_32_10_full_dsp_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_fexp_32ns_32ns_32_10_full_dsp_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_fifo_w40_d2_S.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_fifo_w40_d2_S
-INFO: [VRFC 10-311] analyzing module decode_fifo_w40_d2_S_ShiftReg
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_flow_control_loop_pipe.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_flow_control_loop_pipe
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_fpext_32ns_64_2_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_start_for_castOut_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_start_for_castOut_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module decode_start_for_castOut_U0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_start_for_conv6_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_start_for_conv6_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module decode_start_for_conv6_U0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_fpext_32ns_64_2_no_dsp_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module decode_fpext_32ns_64_2_no_dsp_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_18ns_57_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_18ns_57_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_19ns_58_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_19ns_58_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_20ns_59_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_20ns_59_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_20s_59_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_20s_59_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_21ns_60_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_21ns_60_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_21s_60_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_21s_60_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_22ns_61_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_22ns_61_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_22s_61_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_22s_61_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_23ns_62_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_23ns_62_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_23s_62_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_23s_62_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_24ns_63_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_24ns_63_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_24s_63_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_24s_63_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_25ns_64_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_25ns_64_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_25s_64_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_25s_64_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_26ns_65_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_26ns_65_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_26s_65_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_26s_65_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_27ns_66_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_27ns_66_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_27s_66_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_27s_66_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_28ns_67_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_28ns_67_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_28s_67_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_28s_67_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_29ns_68_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_29ns_68_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_29s_68_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_29s_68_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_30ns_69_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_30ns_69_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_30s_69_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_30s_69_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_31ns_70_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_31ns_70_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_31s_70_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_31s_70_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_32ns_70_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_32ns_70_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_32s_70_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_32s_70_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mul_40s_33s_70_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mul_40s_33s_70_2_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mux_10_4_40_1_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mux_10_4_40_1_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mux_16_4_40_1_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mux_16_4_40_1_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mux_30_5_40_1_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mux_30_5_40_1_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_mux_6_3_40_1_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_mux_6_3_40_1_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_start_for_conv5_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_start_for_conv5_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module decode_start_for_conv5_U0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_23s_54_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_23s_54_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/AESL_deadlock_kernel_monitor_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_kernel_monitor_top
+WARNING: [VRFC 10-3824] variable 'block_delay' must explicitly be declared as automatic or static [/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/AESL_deadlock_kernel_monitor_top.v:48]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_21ns_52_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_21ns_52_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_15ns_47_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_15ns_47_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_start_for_upsamp4_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_start_for_upsamp4_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module decode_start_for_upsamp4_U0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_decode_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_18ns_50_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_18ns_50_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_20s_51_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_20s_51_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_upsamp4_upsam_buf4_V_Rbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_upsamp4_upsam_buf4_V_Rbkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_upsamp6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_upsamp6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_upsamp4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_upsamp4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_18s_50_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_18s_50_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/AESL_axi_s_full_in_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_full_in_AXI
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_start_for_upsamp6_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_start_for_upsamp6_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module decode_start_for_upsamp6_U0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_14ns_46_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_14ns_46_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_25ns_56_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_25ns_56_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_conv6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_conv6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_24ns_55_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_24ns_55_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_16s_48_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_16s_48_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_24s_55_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_24s_55_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_start_for_upsamp5_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_start_for_upsamp5_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module decode_start_for_upsamp5_U0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mux_165_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mux_165_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_28ns_58_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_28ns_58_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_ddiv_64ns_64ns_64_22_ng8j.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_ddiv_64ns_64ns_64_22_ng8j
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_flow_control_loop_pipe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_flow_control_loop_pipe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/AESL_axi_s_full_out_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_full_out_AXI
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_fifo_w32_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_fifo_w32_d2_S_shiftReg
+INFO: [VRFC 10-311] analyzing module decode_fifo_w32_d2_S
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_upsamp5_upsam_buf5_V_Rcud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_upsamp5_upsam_buf5_V_Rcud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_dadd_64ns_64ns_64_5_fufYi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_dadd_64ns_64ns_64_5_fufYi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_26ns_57_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_26ns_57_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_conv5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_conv5
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_22s_53_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_22s_53_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_start_for_conv7_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_start_for_conv7_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module decode_start_for_conv7_U0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mux_63_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mux_63_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mux_305_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mux_305_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_fexp_32ns_32ns_32_8_fueOg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_fexp_32ns_32ns_32_8_fueOg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_27s_58_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_27s_58_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_castIn.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_castIn
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_27ns_58_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_27ns_58_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_regslice_both.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module decode_regslice_both
 INFO: [VRFC 10-311] analyzing module decode_regslice_both_w1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_start_for_conv5_U0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_start_for_conv5_U0
-INFO: [VRFC 10-311] analyzing module decode_start_for_conv5_U0_ShiftReg
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_start_for_conv6_U0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_start_for_conv6_U0
-INFO: [VRFC 10-311] analyzing module decode_start_for_conv6_U0_ShiftReg
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_start_for_conv7_U0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_start_for_conv7_U0
-INFO: [VRFC 10-311] analyzing module decode_start_for_conv7_U0_ShiftReg
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_start_for_upsamp4_U0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_start_for_upsamp4_U0
-INFO: [VRFC 10-311] analyzing module decode_start_for_upsamp4_U0_ShiftReg
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_start_for_upsamp5_U0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_start_for_upsamp5_U0
-INFO: [VRFC 10-311] analyzing module decode_start_for_upsamp5_U0_ShiftReg
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_start_for_upsamp6_U0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_start_for_upsamp6_U0
-INFO: [VRFC 10-311] analyzing module decode_start_for_upsamp6_U0_ShiftReg
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_upsamp4.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_upsamp4
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_upsamp4_upsam_buf4_RAM_AUTO_1R1W.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_upsamp4_upsam_buf4_RAM_AUTO_1R1W
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_upsamp5.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_upsamp6_upsam_buf6_V_RdEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_upsamp6_upsam_buf6_V_RdEe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_28s_58_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_28s_58_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_19s_51_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_19s_51_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_conv7.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_conv7
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_mul_32s_29s_58_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_mul_32s_29s_58_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode_upsamp5.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module decode_upsamp5
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_upsamp5_upsam_buf5_RAM_AUTO_1R1W.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_upsamp5_upsam_buf5_RAM_AUTO_1R1W
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_upsamp6.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_upsamp6
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/decode_upsamp6_upsam_buf6_RAM_AUTO_1R1W.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module decode_upsamp6_upsam_buf6_RAM_AUTO_1R1W
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/fifo_monitor.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fifo_monitor
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ADMIN/GithubClonedRepo/decode/LSI_decoder/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module dataflow_monitor
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3645] port 'axis_block_info' remains unconnected for this instance [/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/AESL_deadlock_kernel_monitor_top.v:38]
+WARNING: [VRFC 10-3705] select index -1 into 'axis_block_sigs' is out of bounds [/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/AESL_deadlock_idx0_monitor.v:70]
+WARNING: [VRFC 10-3705] select index -1 into 'axis_block_sigs' is out of bounds [/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/AESL_deadlock_idx0_monitor.v:78]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -279,402 +281,562 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling package floating_point_v7_1_15.floating_point_v7_1_15_viv_comp
+Compiling package floating_point_v7_1_14.floating_point_v7_1_14_viv_comp
 Compiling package ieee.numeric_std
 Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
 Compiling package axi_utils_v2_0_6.axi_utils_v2_0_6_pkg
-Compiling package floating_point_v7_1_15.floating_point_v7_1_15_consts
+Compiling package floating_point_v7_1_14.floating_point_v7_1_14_consts
 Compiling package ieee.math_real
-Compiling package floating_point_v7_1_15.floating_point_v7_1_15_exp_table...
+Compiling package floating_point_v7_1_14.floating_point_v7_1_14_exp_table...
 Compiling package mult_gen_v12_0_18.mult_gen_v12_0_18_pkg
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_signed
-Compiling package floating_point_v7_1_15.floating_point_v7_1_15_pkg
-Compiling package floating_point_v7_1_15.flt_utils
+Compiling package floating_point_v7_1_14.floating_point_v7_1_14_pkg
+Compiling package floating_point_v7_1_14.flt_utils
 Compiling package unisim.vcomponents
 Compiling package xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv_comp
 Compiling package ieee.vital_timing
 Compiling package ieee.vital_primitives
 Compiling package unisim.vpkg
 Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
-Compiling module xil_defaultlib.decode_mul_40s_19ns_58_2_1(NUM_S...
-Compiling module xil_defaultlib.decode_mul_40s_21ns_60_2_1(NUM_S...
-Compiling module xil_defaultlib.decode_mul_40s_22ns_61_2_1(NUM_S...
-Compiling module xil_defaultlib.decode_mul_40s_23ns_62_2_1(NUM_S...
-Compiling module xil_defaultlib.decode_mul_40s_24ns_63_2_1(NUM_S...
-Compiling module xil_defaultlib.decode_mul_40s_25ns_64_2_1(NUM_S...
-Compiling module xil_defaultlib.decode_mul_40s_26ns_65_2_1(NUM_S...
-Compiling module xil_defaultlib.decode_mul_40s_27ns_66_2_1(NUM_S...
-Compiling module xil_defaultlib.decode_mul_40s_28ns_67_2_1(NUM_S...
-Compiling module xil_defaultlib.decode_mul_40s_29ns_68_2_1(NUM_S...
-Compiling module xil_defaultlib.decode_mul_40s_30ns_69_2_1(NUM_S...
-Compiling module xil_defaultlib.decode_mul_40s_32ns_70_2_1(NUM_S...
-Compiling module xil_defaultlib.decode_mul_40s_31ns_70_2_1(NUM_S...
-Compiling module xil_defaultlib.decode_mul_40s_20s_59_2_1(NUM_ST...
-Compiling module xil_defaultlib.decode_mul_40s_21s_60_2_1(NUM_ST...
-Compiling module xil_defaultlib.decode_mul_40s_22s_61_2_1(NUM_ST...
-Compiling module xil_defaultlib.decode_mul_40s_23s_62_2_1(NUM_ST...
-Compiling module xil_defaultlib.decode_mul_40s_24s_63_2_1(NUM_ST...
-Compiling module xil_defaultlib.decode_mul_40s_25s_64_2_1(NUM_ST...
-Compiling module xil_defaultlib.decode_mul_40s_26s_65_2_1(NUM_ST...
-Compiling module xil_defaultlib.decode_mul_40s_27s_66_2_1(NUM_ST...
-Compiling module xil_defaultlib.decode_mul_40s_28s_67_2_1(NUM_ST...
-Compiling module xil_defaultlib.decode_mul_40s_29s_68_2_1(NUM_ST...
-Compiling module xil_defaultlib.decode_mul_40s_30s_69_2_1(NUM_ST...
-Compiling module xil_defaultlib.decode_mul_40s_31s_70_2_1(NUM_ST...
-Compiling module xil_defaultlib.decode_mul_40s_33s_70_2_1(NUM_ST...
-Compiling module xil_defaultlib.decode_mux_6_3_40_1_1(ID=1,din0_...
 Compiling module xil_defaultlib.decode_flow_control_loop_pipe
+Compiling module xil_defaultlib.decode_regslice_both
 Compiling module xil_defaultlib.decode_regslice_both(DataWidth=4...
+Compiling module xil_defaultlib.decode_regslice_both(DataWidth=2...
+Compiling module xil_defaultlib.decode_regslice_both(DataWidth=1...
+Compiling module xil_defaultlib.decode_regslice_both(DataWidth=5...
+Compiling module xil_defaultlib.decode_regslice_both(DataWidth=6...
+Compiling module xil_defaultlib.decode_castIn
+Compiling module xil_defaultlib.decode_mux_63_32_1_1(ID=1,din6_W...
+Compiling module xil_defaultlib.decode_mul_32s_23s_54_1_1(NUM_ST...
+Compiling module xil_defaultlib.decode_mul_32s_19ns_51_1_1(NUM_S...
+Compiling module xil_defaultlib.decode_mul_32s_23ns_54_1_1(NUM_S...
+Compiling module xil_defaultlib.decode_mul_32s_24s_55_1_1(NUM_ST...
+Compiling module xil_defaultlib.decode_mul_32s_25s_56_1_1(NUM_ST...
+Compiling module xil_defaultlib.decode_mul_32s_25ns_56_1_1(NUM_S...
+Compiling module xil_defaultlib.decode_mul_32s_24ns_55_1_1(NUM_S...
+Compiling module xil_defaultlib.decode_mul_32s_22ns_53_1_1(NUM_S...
+Compiling module xil_defaultlib.decode_mul_32s_26ns_57_1_1(NUM_S...
+Compiling module xil_defaultlib.decode_mul_32s_22s_53_1_1(NUM_ST...
+Compiling module xil_defaultlib.decode_mul_32s_26s_57_1_1(NUM_ST...
+Compiling module xil_defaultlib.decode_mul_32s_21s_52_1_1(NUM_ST...
+Compiling module xil_defaultlib.decode_mul_32s_18s_50_1_1(NUM_ST...
+Compiling module xil_defaultlib.decode_mul_32s_21ns_52_1_1(NUM_S...
+Compiling module xil_defaultlib.decode_mul_32s_20s_51_1_1(NUM_ST...
+Compiling module xil_defaultlib.decode_mul_32s_18ns_50_1_1(NUM_S...
+Compiling module xil_defaultlib.decode_mul_32s_17s_49_1_1(NUM_ST...
+Compiling module xil_defaultlib.decode_mul_32s_27ns_58_1_1(NUM_S...
+Compiling module xil_defaultlib.decode_mul_32s_27s_58_1_1(NUM_ST...
+Compiling module xil_defaultlib.decode_mul_32s_16s_48_1_1(NUM_ST...
+Compiling module xil_defaultlib.decode_mul_32s_17ns_49_1_1(NUM_S...
+Compiling module xil_defaultlib.decode_mul_32s_20ns_51_1_1(NUM_S...
+Compiling module xil_defaultlib.decode_mul_32s_28ns_58_1_1(NUM_S...
+Compiling module xil_defaultlib.decode_mul_32s_19s_51_1_1(NUM_ST...
+Compiling module xil_defaultlib.decode_mul_32s_29s_58_1_1(NUM_ST...
+Compiling module xil_defaultlib.decode_mul_32s_15ns_47_1_1(NUM_S...
 Compiling module xil_defaultlib.decode_conv4
-Compiling module xil_defaultlib.decode_upsamp4_upsam_buf4_RAM_AU...
+Compiling module xil_defaultlib.decode_upsamp4_upsam_buf4_V_Rbkb
 Compiling module xil_defaultlib.decode_upsamp4
-Compiling module xil_defaultlib.decode_mul_40s_20ns_59_2_1(NUM_S...
-Compiling module xil_defaultlib.decode_mux_10_4_40_1_1(ID=1,din0...
+Compiling module xil_defaultlib.decode_mux_104_32_1_1(ID=1,din10...
+Compiling module xil_defaultlib.decode_mul_32s_16ns_48_1_1(NUM_S...
 Compiling module xil_defaultlib.decode_conv5
-Compiling module xil_defaultlib.decode_upsamp5_upsam_buf5_RAM_AU...
+Compiling module xil_defaultlib.decode_upsamp5_upsam_buf5_V_Rcud
 Compiling module xil_defaultlib.decode_upsamp5
-Compiling module xil_defaultlib.decode_mul_40s_18ns_57_2_1(NUM_S...
-Compiling module xil_defaultlib.decode_mul_40s_32s_70_2_1(NUM_ST...
-Compiling module xil_defaultlib.decode_mux_16_4_40_1_1(ID=1,din0...
+Compiling module xil_defaultlib.decode_mux_165_32_1_1(ID=1,din16...
+Compiling module xil_defaultlib.decode_mul_32s_28s_58_1_1(NUM_ST...
+Compiling module xil_defaultlib.decode_mul_32s_14ns_46_1_1(NUM_S...
 Compiling module xil_defaultlib.decode_conv6
-Compiling module xil_defaultlib.decode_upsamp6_upsam_buf6_RAM_AU...
+Compiling module xil_defaultlib.decode_upsamp6_upsam_buf6_V_RdEe
 Compiling module xil_defaultlib.decode_upsamp6
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=23,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=23,length=0)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=8,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=8,length=0)\]
 Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=4,length=0)\]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="ki...]
-Compiling architecture synth of entity floating_point_v7_1_15.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(length=0,fast_input=true)...]
-Compiling architecture rtl of entity floating_point_v7_1_15.special_detect [\special_detect(a_fw=24,op_delay...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=4,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="ki...]
+Compiling architecture synth of entity floating_point_v7_1_14.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(length=0,fast_input=true)...]
+Compiling architecture rtl of entity floating_point_v7_1_14.special_detect [\special_detect(a_fw=24,op_delay...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(length=0)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=2,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=2,length=0)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=4,length=0,fast_inp...]
-Compiling architecture rtl of entity floating_point_v7_1_15.flt_to_flt_conv_exp [\flt_to_flt_conv_exp(r_w=64,r_ew...]
-Compiling architecture synth of entity floating_point_v7_1_15.flt_dec_op [\flt_dec_op(c_xdevicefamily="zyn...]
-Compiling architecture rtl of entity floating_point_v7_1_15.flt_to_flt_conv [\flt_to_flt_conv(c_xdevicefamily...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=4,length=0,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_14.flt_to_flt_conv_exp [\flt_to_flt_conv_exp(r_w=64,r_ew...]
+Compiling architecture synth of entity floating_point_v7_1_14.flt_dec_op [\flt_dec_op(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_14.flt_to_flt_conv [\flt_to_flt_conv(c_xdevicefamily...]
 Compiling module unisims_ver.x_lut1_mux2
 Compiling module unisims_ver.LUT1
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=64,length=0)\]
-Compiling architecture xilinx of entity floating_point_v7_1_15.floating_point_v7_1_15_viv [\floating_point_v7_1_15_viv(c_xd...]
-Compiling architecture xilinx of entity floating_point_v7_1_15.floating_point_v7_1_15 [\floating_point_v7_1_15(c_xdevic...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=64,length=0)\]
+Compiling architecture xilinx of entity floating_point_v7_1_14.floating_point_v7_1_14_viv [\floating_point_v7_1_14_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_14.floating_point_v7_1_14 [\floating_point_v7_1_14(c_xdevic...]
 Compiling module xil_defaultlib.decode_fpext_32ns_64_2_no_dsp_1_...
 Compiling module xil_defaultlib.decode_fpext_32ns_64_2_no_dsp_1(...
-Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,alumodereg=0...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=43,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=43,length=0)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=17,length=0)\]
-Compiling architecture rtl of entity floating_point_v7_1_15.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=17,b_wi...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=17,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=17,b_wi...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(fast_input=true)\]
-Compiling architecture rtl of entity floating_point_v7_1_15.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(fast_input=true)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.special_detect [\special_detect(c_xdevicefamily=...]
 Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
 Compiling architecture fde_v of entity unisim.FDE [fde_default]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(length=6)\]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
-Compiling architecture synth of entity floating_point_v7_1_15.compare_gt [\compare_gt(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(length=4)\]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_14.compare_gt [\compare_gt(c_xdevicefamily="zyn...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=2,length=6,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=2,length=4,fast_inp...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(length=7)\]
-Compiling architecture synth of entity floating_point_v7_1_15.flt_exp_specialcase [\flt_exp_specialcase(c_xdevicefa...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(length=5)\]
+Compiling architecture synth of entity floating_point_v7_1_14.flt_exp_specialcase [\flt_exp_specialcase(c_xdevicefa...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=10,length=0)\]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay_s [\delay_s(width=10,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=10,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay_s [\delay_s(width=10,length=0)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=9,length=0)\]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay_s [\delay_s(width=9,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=9,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay_s [\delay_s(width=9,length=0)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=2,fast_input=true)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=2,fast_input=true)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=16,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=16,length=0)\]
 Compiling architecture muxf7_v of entity unisim.MUXF7 [muxf7_default]
 Compiling architecture muxf8_v of entity unisim.MUXF8 [muxf8_default]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=16)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=6,length=0)\]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
-Compiling architecture synth of entity floating_point_v7_1_15.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
-Compiling architecture rtl of entity floating_point_v7_1_15.zero_det_sel [\zero_det_sel(c_xdevicefamily="z...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=6,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_14.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_14.zero_det_sel [\zero_det_sel(c_xdevicefamily="z...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=34,length=0)\]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=34)\]
-Compiling architecture rtl of entity floating_point_v7_1_15.shift_msb_first [\shift_msb_first(a_width=24,resu...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [delay_default]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=34,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.shift_msb_first [\shift_msb_first(a_width=24,resu...]
 Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=36,length=0)\]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
-Compiling architecture synth of entity floating_point_v7_1_15.flt_to_fix_conv [\flt_to_fix_conv(c_xdevicefamily...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=35,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=36)\]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=34)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [delay_default]
+Compiling architecture synth of entity floating_point_v7_1_14.flt_to_fix_conv [\flt_to_fix_conv(c_xdevicefamily...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=5,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=5,length=0)\]
 Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=7,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=7,length=0)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=48,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=48,length=0)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=30,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=30,length=0)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=18,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=18,length=0)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=25,length=0)\]
-Compiling architecture rtl of entity floating_point_v7_1_15.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=30,b_wi...]
-Compiling architecture synth of entity floating_point_v7_1_15.flt_log_addsub [\flt_log_addsub(c_xdevicefamily=...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=5)\]
-Compiling architecture rtl of entity floating_point_v7_1_15.flt_exp_ccm [\flt_exp_ccm(c_xdevicefamily="zy...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(length=2)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=25,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=30,b_wi...]
+Compiling architecture synth of entity floating_point_v7_1_14.flt_log_addsub [\flt_log_addsub(c_xdevicefamily=...]
 Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
-Compiling architecture rtl of entity floating_point_v7_1_15.dsp48e1_wrapper [\dsp48e1_wrapper(c_part="xc7z010...]
-Compiling architecture synth of entity floating_point_v7_1_15.flt_log_addsub [\flt_log_addsub(c_xdevicefamily=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.dsp48e1_wrapper [\dsp48e1_wrapper(c_part="xc7z010...]
-Compiling architecture synth of entity floating_point_v7_1_15.flt_log_addsub [\flt_log_addsub(c_xdevicefamily=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.flt_exp_ccm [\flt_exp_ccm(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_14.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=30,b_wi...]
+Compiling architecture synth of entity floating_point_v7_1_14.flt_log_addsub [\flt_log_addsub(c_xdevicefamily=...]
+Compiling architecture rtl of entity floating_point_v7_1_14.flt_exp_ccm [\flt_exp_ccm(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_14.dsp48e1_wrapper [\dsp48e1_wrapper(c_part="xczu7ev...]
+Compiling architecture synth of entity floating_point_v7_1_14.flt_log_addsub [\flt_log_addsub(c_xdevicefamily=...]
+Compiling architecture rtl of entity floating_point_v7_1_14.dsp48e1_wrapper [\dsp48e1_wrapper(c_part="xczu7ev...]
+Compiling architecture synth of entity floating_point_v7_1_14.flt_log_addsub [\flt_log_addsub(c_xdevicefamily=...]
+Compiling architecture rtl of entity floating_point_v7_1_14.flt_exp_ccm [\flt_exp_ccm(c_xdevicefamily="zy...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=33,length=3)\]
-Compiling architecture synth of entity floating_point_v7_1_15.flt_log_addsub [\flt_log_addsub(c_xdevicefamily=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.flt_exp_e2A [\flt_exp_e2A(c_xdevicefamily="zy...]
-Compiling architecture rtl of entity floating_point_v7_1_15.flt_exp_e2zmzm1 [\flt_exp_e2zmzm1(c_xdevicefamily...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=33,length=2)\]
+Compiling architecture synth of entity floating_point_v7_1_14.flt_log_addsub [\flt_log_addsub(c_xdevicefamily=...]
+Compiling architecture rtl of entity floating_point_v7_1_14.flt_exp_e2A [\flt_exp_e2A(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_14.flt_exp_e2zmzm1 [\flt_exp_e2zmzm1(c_xdevicefamily...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=8,length=4)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=16)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(length=3)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=8,length=3)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=8)\]
-Compiling architecture rtl of entity floating_point_v7_1_15.dsp48e1_wrapper [\dsp48e1_wrapper(b_width=18,c_wi...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=14)\]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=25,fast_input=true)...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(length=2)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.dsp48e1_wrapper [\dsp48e1_wrapper(b_width=18,c_wi...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=3,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=14,length=0)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=2,length=0,fast_inp...]
-Compiling architecture rtl of entity floating_point_v7_1_15.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=2)\]
-Compiling architecture rtl of entity floating_point_v7_1_15.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=25,length=0,fast_in...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=3,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=2,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_14.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_14.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
 Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1100110010010110")(0...]
 Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1100110000111100")(0...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=9,length=0,fast_inp...]
-Compiling architecture synth of entity floating_point_v7_1_15.flt_log_addsub [\flt_log_addsub(c_xdevicefamily=...]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
-Compiling architecture synth of entity floating_point_v7_1_15.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
-Compiling architecture synth of entity floating_point_v7_1_15.compare_ne_im [\compare_ne_im(c_xdevicefamily="...]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
-Compiling architecture synth of entity floating_point_v7_1_15.compare_gt [\compare_gt(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=9,length=0,fast_inp...]
+Compiling architecture synth of entity floating_point_v7_1_14.flt_log_addsub [\flt_log_addsub(c_xdevicefamily=...]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_14.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture synth of entity floating_point_v7_1_14.compare_ne_im [\compare_ne_im(c_xdevicefamily="...]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_14.compare_gt [\compare_gt(c_xdevicefamily="zyn...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=32)\]
-Compiling architecture synth of entity floating_point_v7_1_15.flt_exp_recomb [\flt_exp_recomb(c_xdevicefamily=...]
-Compiling architecture synth of entity floating_point_v7_1_15.flt_exp [\flt_exp(c_xdevicefamily="zynq",...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=32)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=2)\]
+Compiling architecture synth of entity floating_point_v7_1_14.flt_exp_recomb [\flt_exp_recomb(c_xdevicefamily=...]
+Compiling architecture synth of entity floating_point_v7_1_14.flt_exp [\flt_exp(c_xdevicefamily="zynqup...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=32,length=0)\]
-Compiling architecture xilinx of entity floating_point_v7_1_15.floating_point_v7_1_15_viv [\floating_point_v7_1_15_viv(c_xd...]
-Compiling architecture xilinx of entity floating_point_v7_1_15.floating_point_v7_1_15 [\floating_point_v7_1_15(c_xdevic...]
-Compiling module xil_defaultlib.decode_fexp_32ns_32ns_32_10_full...
-Compiling module xil_defaultlib.decode_fexp_32ns_32ns_32_10_full...
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=32,length=0)\]
+Compiling architecture xilinx of entity floating_point_v7_1_14.floating_point_v7_1_14_viv [\floating_point_v7_1_14_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_14.floating_point_v7_1_14 [\floating_point_v7_1_14(c_xdevic...]
+Compiling module xil_defaultlib.decode_fexp_32ns_32ns_32_8_fueOg...
+Compiling module xil_defaultlib.decode_fexp_32ns_32ns_32_8_fueOg...
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=52)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=52)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=14,length=0)\]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=3,fast_input=true)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=3,length=0,fast_inp...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=54,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=54,length=0)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=11,length=0,fast_in...]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
-Compiling architecture synth of entity floating_point_v7_1_15.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
-Compiling architecture rtl of entity floating_point_v7_1_15.zero_det_sel [\zero_det_sel(c_xdevicefamily="z...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=11,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_14.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_14.zero_det_sel [\zero_det_sel(c_xdevicefamily="z...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=55,length=0)\]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=55)\]
-Compiling architecture rtl of entity floating_point_v7_1_15.shift_msb_first [\shift_msb_first(a_width=54,regi...]
-Compiling architecture rtl of entity floating_point_v7_1_15.alignment [\alignment(c_xdevicefamily="zynq...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=55,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.shift_msb_first [\shift_msb_first(a_width=54,regi...]
+Compiling architecture rtl of entity floating_point_v7_1_14.alignment [\alignment(c_xdevicefamily="zynq...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=47,length=0)\]
-Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(adreg=0,alumodereg=0,ca...]
-Compiling architecture rtl of entity floating_point_v7_1_15.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=30,b_wi...]
-Compiling architecture rtl of entity floating_point_v7_1_15.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=30,b_wi...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=47,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=30,b_wi...]
+Compiling architecture rtl of entity floating_point_v7_1_14.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=30,b_wi...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=9)\]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=9)\]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=56,length=0)\]
-Compiling architecture synth of entity floating_point_v7_1_15.addsub_dsp [\addsub_dsp(c_xdevicefamily="zyn...]
-Compiling architecture rtl of entity floating_point_v7_1_15.addsub [\addsub(c_xdevicefamily="zynq",c...]
-Compiling architecture rtl of entity floating_point_v7_1_15.align_add [\align_add(c_xdevicefamily="zynq...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=56,length=0)\]
+Compiling architecture synth of entity floating_point_v7_1_14.addsub_dsp [\addsub_dsp(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_14.addsub [\addsub(c_xdevicefamily="zynqupl...]
+Compiling architecture rtl of entity floating_point_v7_1_14.align_add [\align_add(c_xdevicefamily="zynq...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=6,length=0,fast_inp...]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
-Compiling architecture rtl of entity floating_point_v7_1_15.mux4 [\mux4(c_xdevicefamily="zynq",wid...]
-Compiling architecture rtl of entity floating_point_v7_1_15.mux4 [\mux4(c_xdevicefamily="zynq",wid...]
-Compiling architecture rtl of entity floating_point_v7_1_15.mux4 [\mux4(c_xdevicefamily="zynq",wid...]
-Compiling architecture rtl of entity floating_point_v7_1_15.mux4 [\mux4(c_xdevicefamily="zynq",wid...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=6,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_14.mux4 [\mux4(c_xdevicefamily="zynquplus...]
+Compiling architecture rtl of entity floating_point_v7_1_14.mux4 [\mux4(c_xdevicefamily="zynquplus...]
+Compiling architecture rtl of entity floating_point_v7_1_14.mux4 [\mux4(c_xdevicefamily="zynquplus...]
+Compiling architecture rtl of entity floating_point_v7_1_14.mux4 [\mux4(c_xdevicefamily="zynquplus...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=8,length=0,fast_inp...]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
-Compiling architecture rtl of entity floating_point_v7_1_15.lead_zero_encode [\lead_zero_encode(c_xdevicefamil...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=8,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_14.lead_zero_encode [\lead_zero_encode(c_xdevicefamil...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=56)\]
-Compiling architecture rtl of entity floating_point_v7_1_15.shift_msb_first [\shift_msb_first(a_width=56,resu...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=56)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.shift_msb_first [\shift_msb_first(a_width=56,resu...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=19,length=0)\]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=19,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=28,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=28,length=0)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=29,length=0)\]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
-Compiling architecture rtl of entity floating_point_v7_1_15.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
-Compiling architecture rtl of entity floating_point_v7_1_15.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
-Compiling architecture rtl of entity floating_point_v7_1_15.norm_and_round_logic [\norm_and_round_logic(c_xdevicef...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=29,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_14.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_14.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture rtl of entity floating_point_v7_1_14.norm_and_round_logic [\norm_and_round_logic(c_xdevicef...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=12,length=0)\]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=12,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=12,length=0,fast_in...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=12,length=0,fast_in...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=12,length=3)\]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=2,length=2)\]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
-Compiling architecture synth of entity floating_point_v7_1_15.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
-Compiling architecture rtl of entity floating_point_v7_1_15.special_detect [\special_detect(c_xdevicefamily=...]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
-Compiling architecture synth of entity floating_point_v7_1_15.compare_gt [\compare_gt(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=12,length=2)\]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_14.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_14.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_14.compare_gt [\compare_gt(c_xdevicefamily="zyn...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=11,length=0)\]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
-Compiling architecture synth of entity floating_point_v7_1_15.compare_eq [\compare_eq(c_xdevicefamily="zyn...]
-Compiling architecture synth of entity floating_point_v7_1_15.compare [\compare(c_xdevicefamily="zynq",...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=11,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_14.compare_eq [\compare_eq(c_xdevicefamily="zyn...]
+Compiling architecture synth of entity floating_point_v7_1_14.compare [\compare(c_xdevicefamily="zynqup...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=11)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=11)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=12)\]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=12)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=2,length=3,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=2,length=2,fast_inp...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(length=3,fast_input=true)...]
-Compiling architecture rtl of entity floating_point_v7_1_15.flt_add_exp [\flt_add_exp(c_xdevicefamily="zy...]
-Compiling architecture synth of entity floating_point_v7_1_15.flt_dec_op [\flt_dec_op(c_xdevicefamily="zyn...]
-Compiling architecture rtl of entity floating_point_v7_1_15.flt_add_logic [\flt_add_logic(c_xdevicefamily="...]
-Compiling architecture rtl of entity floating_point_v7_1_15.flt_add [\flt_add(c_xdevicefamily="zynq",...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(length=2,fast_input=true)...]
+Compiling architecture rtl of entity floating_point_v7_1_14.flt_add_exp [\flt_add_exp(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_14.flt_dec_op [\flt_dec_op(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_14.flt_add_logic [\flt_add_logic(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_14.flt_add [\flt_add(c_xdevicefamily="zynqup...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture xilinx of entity floating_point_v7_1_15.floating_point_v7_1_15_viv [\floating_point_v7_1_15_viv(c_xd...]
-Compiling architecture xilinx of entity floating_point_v7_1_15.floating_point_v7_1_15 [\floating_point_v7_1_15(c_xdevic...]
-Compiling module xil_defaultlib.decode_dadd_64ns_64ns_64_7_full_...
-Compiling module xil_defaultlib.decode_dadd_64ns_64ns_64_7_full_...
+Compiling architecture xilinx of entity floating_point_v7_1_14.floating_point_v7_1_14_viv [\floating_point_v7_1_14_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_14.floating_point_v7_1_14 [\floating_point_v7_1_14(c_xdevic...]
+Compiling module xil_defaultlib.decode_dadd_64ns_64ns_64_5_fufYi...
+Compiling module xil_defaultlib.decode_dadd_64ns_64ns_64_5_fufYi...
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=53,length=0)\]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=54,fast_input=true)...]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
-Compiling architecture synth of entity floating_point_v7_1_15.flt_div_mant_addsub [\flt_div_mant_addsub(c_xdevicefa...]
-Compiling architecture virtex of entity floating_point_v7_1_15.flt_div_mant [\flt_div_mant(c_xdevicefamily="z...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=13,length=2,fast_in...]
-Compiling architecture rtl of entity floating_point_v7_1_15.special_detect [\special_detect(c_xdevicefamily=...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(length=54,fast_input=true...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=2,length=2,fast_inp...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(length=2,fast_input=true)...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(length=55,fast_input=true...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=4,fast_input=true)\]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=11,length=53)\]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(length=53,fast_input=true...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=3,length=52,fast_in...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=4,length=53,fast_in...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(length=52,fast_input=true...]
-Compiling architecture rtl of entity floating_point_v7_1_15.flt_div_exp [\flt_div_exp(c_xdevicefamily="no...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=26,fast_input=true)...]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=26)\]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=27,fast_input=true)...]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=52,length=0)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_15.delay [\delay(width=54,length=0,fast_in...]
-Compiling architecture struct of entity floating_point_v7_1_15.carry_chain [\carry_chain(c_xdevicefamily="zy...]
-Compiling architecture rtl of entity floating_point_v7_1_15.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
-Compiling architecture rtl of entity floating_point_v7_1_15.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
-Compiling architecture synth of entity floating_point_v7_1_15.flt_dec_op_lat [\flt_dec_op_lat(c_xdevicefamily=...]
-Compiling architecture virtex of entity floating_point_v7_1_15.flt_div [\flt_div(c_xdevicefamily="zynq",...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=54,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_14.flt_div_mant_addsub [\flt_div_mant_addsub(c_xdevicefa...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=53,length=0)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture xilinx of entity floating_point_v7_1_15.floating_point_v7_1_15_viv [\floating_point_v7_1_15_viv(c_xd...]
-Compiling architecture xilinx of entity floating_point_v7_1_15.floating_point_v7_1_15 [\floating_point_v7_1_15(c_xdevic...]
-Compiling module xil_defaultlib.decode_ddiv_64ns_64ns_64_59_no_d...
-Compiling module xil_defaultlib.decode_ddiv_64ns_64ns_64_59_no_d...
-Compiling module xil_defaultlib.decode_mux_30_5_40_1_1(ID=1,din0...
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=54,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_14.flt_div_mant_addsub [\flt_div_mant_addsub(c_xdevicefa...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=55)\]
+Compiling architecture virtex of entity floating_point_v7_1_14.flt_div_mant [\flt_div_mant(c_xdevicefamily="z...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=13,length=0,fast_in...]
+Compiling architecture rtl of entity floating_point_v7_1_14.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(length=19,fast_input=true...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=4,fast_input=true)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=11,length=19)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(length=18,fast_input=true...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=3,length=18,fast_in...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=4,length=18,fast_in...]
+Compiling architecture rtl of entity floating_point_v7_1_14.flt_div_exp [\flt_div_exp(c_xdevicefamily="no...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=26,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_14.delay [\delay(width=27,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture struct of entity floating_point_v7_1_14.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_14.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture synth of entity floating_point_v7_1_14.flt_dec_op_lat [\flt_dec_op_lat(c_xdevicefamily=...]
+Compiling architecture virtex of entity floating_point_v7_1_14.flt_div [\flt_div(c_xdevicefamily="zynqup...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture xilinx of entity floating_point_v7_1_14.floating_point_v7_1_14_viv [\floating_point_v7_1_14_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_14.floating_point_v7_1_14 [\floating_point_v7_1_14(c_xdevic...]
+Compiling module xil_defaultlib.decode_ddiv_64ns_64ns_64_22_ng8j...
+Compiling module xil_defaultlib.decode_ddiv_64ns_64ns_64_22_ng8j...
+Compiling module xil_defaultlib.decode_mux_305_32_1_1(ID=1,din30...
 Compiling module xil_defaultlib.decode_conv7
-Compiling module xil_defaultlib.decode_fifo_w40_d2_S_ShiftReg(DE...
-Compiling module xil_defaultlib.decode_fifo_w40_d2_S(DEPTH=2'b10...
-Compiling module xil_defaultlib.decode_start_for_upsamp4_U0_Shif...
+Compiling module xil_defaultlib.decode_castOut
+Compiling module xil_defaultlib.decode_fifo_w32_d2_S_shiftReg
+Compiling module xil_defaultlib.decode_fifo_w32_d2_S
+Compiling module xil_defaultlib.decode_start_for_conv4_U0_shiftR...
+Compiling module xil_defaultlib.decode_start_for_conv4_U0
+Compiling module xil_defaultlib.decode_start_for_upsamp4_U0_shif...
 Compiling module xil_defaultlib.decode_start_for_upsamp4_U0
-Compiling module xil_defaultlib.decode_start_for_conv5_U0_ShiftR...
+Compiling module xil_defaultlib.decode_start_for_conv5_U0_shiftR...
 Compiling module xil_defaultlib.decode_start_for_conv5_U0
-Compiling module xil_defaultlib.decode_start_for_upsamp5_U0_Shif...
+Compiling module xil_defaultlib.decode_start_for_upsamp5_U0_shif...
 Compiling module xil_defaultlib.decode_start_for_upsamp5_U0
-Compiling module xil_defaultlib.decode_start_for_conv6_U0_ShiftR...
+Compiling module xil_defaultlib.decode_start_for_conv6_U0_shiftR...
 Compiling module xil_defaultlib.decode_start_for_conv6_U0
-Compiling module xil_defaultlib.decode_start_for_upsamp6_U0_Shif...
+Compiling module xil_defaultlib.decode_start_for_upsamp6_U0_shif...
 Compiling module xil_defaultlib.decode_start_for_upsamp6_U0
-Compiling module xil_defaultlib.decode_start_for_conv7_U0_ShiftR...
+Compiling module xil_defaultlib.decode_start_for_conv7_U0_shiftR...
 Compiling module xil_defaultlib.decode_start_for_conv7_U0
+Compiling module xil_defaultlib.decode_start_for_castOut_U0_shif...
+Compiling module xil_defaultlib.decode_start_for_castOut_U0
 Compiling module xil_defaultlib.decode
-Compiling module xil_defaultlib.fifo(DEPTH=128,WIDTH=40)
-Compiling module xil_defaultlib.AESL_axi_s_full_in
-Compiling module xil_defaultlib.fifo(DEPTH=784,WIDTH=40)
-Compiling module xil_defaultlib.AESL_axi_s_full_out
+Compiling module xil_defaultlib.fifo(DEPTH=128,WIDTH=32)
+Compiling module xil_defaultlib.fifo(DEPTH=128,WIDTH=4)
+Compiling module xil_defaultlib.fifo(DEPTH=128,WIDTH=2)
+Compiling module xil_defaultlib.fifo(DEPTH=128,WIDTH=1)
+Compiling module xil_defaultlib.fifo(DEPTH=128,WIDTH=5)
+Compiling module xil_defaultlib.fifo(DEPTH=128,WIDTH=6)
+Compiling module xil_defaultlib.AESL_axi_s_full_in_AXI
+Compiling module xil_defaultlib.fifo(DEPTH=784,WIDTH=32)
+Compiling module xil_defaultlib.fifo(DEPTH=784,WIDTH=4)
+Compiling module xil_defaultlib.fifo(DEPTH=784,WIDTH=2)
+Compiling module xil_defaultlib.fifo(DEPTH=784,WIDTH=1)
+Compiling module xil_defaultlib.fifo(DEPTH=784,WIDTH=5)
+Compiling module xil_defaultlib.fifo(DEPTH=784,WIDTH=6)
+Compiling module xil_defaultlib.AESL_axi_s_full_out_AXI
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_report_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detector_1
+WARNING: [VRFC 10-3705] select index -1 into 'axis_block_sigs' is out of bounds [/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/AESL_deadlock_idx0_monitor.v:70]
+WARNING: [VRFC 10-3705] select index -1 into 'axis_block_sigs' is out of bounds [/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/AESL_deadlock_idx0_monitor.v:78]
+Compiling module xil_defaultlib.AESL_deadlock_idx0_monitor
+Compiling module xil_defaultlib.AESL_deadlock_kernel_monitor_top...
 Compiling module xil_defaultlib.df_fifo_intf
 Compiling module xil_defaultlib.df_process_intf
 Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
 Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=8)
 Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=16)
 Compiling module xil_defaultlib.dataflow_monitor_1
-Compiling module xil_defaultlib.fifo_monitor_1
 Compiling module xil_defaultlib.apatb_decode_top
 Compiling module work.glbl
 Built simulation snapshot decode
-ECHO is off.
-ECHO is off.
 
-****** xsim v2023.1 (64-bit)
-  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
-  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
-  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+****** xsim v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
-start_gui
+source xsim.dir/decode/xsim_script.tcl
+# xsim {decode} -view {{decode_dataflow_ana.wcfg}} -tclbatch {decode.tcl} -protoinst {decode.protoinst}
+INFO: [Wavedata 42-565] Reading protoinst file decode.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_decode_top/AESL_inst_decode//AESL_inst_decode_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_decode_top/AESL_inst_decode/castIn_U0/castIn_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_decode_top/AESL_inst_decode/castOut_U0/castOut_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_decode_top/AESL_inst_decode/conv4_U0/conv4_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_decode_top/AESL_inst_decode/conv5_U0/conv5_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_decode_top/AESL_inst_decode/conv6_U0/conv6_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_decode_top/AESL_inst_decode/conv7_U0/conv7_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_decode_top/AESL_inst_decode/upsamp4_U0/upsamp4_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_decode_top/AESL_inst_decode/upsamp5_U0/upsamp5_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_decode_top/AESL_inst_decode/upsamp6_U0/upsamp6_U0_activity
+Time resolution is 1 ps
+open_wave_config decode_dataflow_ana.wcfg
+source decode.tcl
+## log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set return_group [add_wave_group return(axis) -into $coutputgroup]
+## add_wave /apatb_decode_top/AESL_inst_decode/full_out_AXI_TREADY -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_decode_top/AESL_inst_decode/full_out_AXI_TVALID -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_decode_top/AESL_inst_decode/full_out_AXI_TDEST -into $return_group -radix hex
+## add_wave /apatb_decode_top/AESL_inst_decode/full_out_AXI_TID -into $return_group -radix hex
+## add_wave /apatb_decode_top/AESL_inst_decode/full_out_AXI_TLAST -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_decode_top/AESL_inst_decode/full_out_AXI_TUSER -into $return_group -radix hex
+## add_wave /apatb_decode_top/AESL_inst_decode/full_out_AXI_TSTRB -into $return_group -radix hex
+## add_wave /apatb_decode_top/AESL_inst_decode/full_out_AXI_TKEEP -into $return_group -radix hex
+## add_wave /apatb_decode_top/AESL_inst_decode/full_out_AXI_TDATA -into $return_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set return_group [add_wave_group return(axis) -into $cinputgroup]
+## add_wave /apatb_decode_top/AESL_inst_decode/full_in_AXI_TREADY -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_decode_top/AESL_inst_decode/full_in_AXI_TVALID -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_decode_top/AESL_inst_decode/full_in_AXI_TDEST -into $return_group -radix hex
+## add_wave /apatb_decode_top/AESL_inst_decode/full_in_AXI_TID -into $return_group -radix hex
+## add_wave /apatb_decode_top/AESL_inst_decode/full_in_AXI_TLAST -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_decode_top/AESL_inst_decode/full_in_AXI_TUSER -into $return_group -radix hex
+## add_wave /apatb_decode_top/AESL_inst_decode/full_in_AXI_TSTRB -into $return_group -radix hex
+## add_wave /apatb_decode_top/AESL_inst_decode/full_in_AXI_TKEEP -into $return_group -radix hex
+## add_wave /apatb_decode_top/AESL_inst_decode/full_in_AXI_TDATA -into $return_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_decode_top/AESL_inst_decode/ap_start -into $blocksiggroup
+## add_wave /apatb_decode_top/AESL_inst_decode/ap_done -into $blocksiggroup
+## add_wave /apatb_decode_top/AESL_inst_decode/ap_ready -into $blocksiggroup
+## add_wave /apatb_decode_top/AESL_inst_decode/ap_idle -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_decode_top/AESL_inst_decode/ap_rst_n -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_decode_top/AESL_inst_decode/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_decode_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_decode_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_decode_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_decode_top/LENGTH_full_in_AXI_V_data_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_decode_top/LENGTH_full_in_AXI_V_keep_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_decode_top/LENGTH_full_in_AXI_V_strb_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_decode_top/LENGTH_full_in_AXI_V_user_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_decode_top/LENGTH_full_in_AXI_V_last_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_decode_top/LENGTH_full_in_AXI_V_id_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_decode_top/LENGTH_full_in_AXI_V_dest_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_decode_top/LENGTH_full_out_AXI_V_data_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_decode_top/LENGTH_full_out_AXI_V_keep_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_decode_top/LENGTH_full_out_AXI_V_strb_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_decode_top/LENGTH_full_out_AXI_V_user_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_decode_top/LENGTH_full_out_AXI_V_last_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_decode_top/LENGTH_full_out_AXI_V_id_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_decode_top/LENGTH_full_out_AXI_V_dest_V -into $tb_portdepth_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_return_group [add_wave_group return(axis) -into $tbcoutputgroup]
+## add_wave /apatb_decode_top/full_out_AXI_TREADY -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_decode_top/full_out_AXI_TVALID -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_decode_top/full_out_AXI_TDEST -into $tb_return_group -radix hex
+## add_wave /apatb_decode_top/full_out_AXI_TID -into $tb_return_group -radix hex
+## add_wave /apatb_decode_top/full_out_AXI_TLAST -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_decode_top/full_out_AXI_TUSER -into $tb_return_group -radix hex
+## add_wave /apatb_decode_top/full_out_AXI_TSTRB -into $tb_return_group -radix hex
+## add_wave /apatb_decode_top/full_out_AXI_TKEEP -into $tb_return_group -radix hex
+## add_wave /apatb_decode_top/full_out_AXI_TDATA -into $tb_return_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_return_group [add_wave_group return(axis) -into $tbcinputgroup]
+## add_wave /apatb_decode_top/full_in_AXI_TREADY -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_decode_top/full_in_AXI_TVALID -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_decode_top/full_in_AXI_TDEST -into $tb_return_group -radix hex
+## add_wave /apatb_decode_top/full_in_AXI_TID -into $tb_return_group -radix hex
+## add_wave /apatb_decode_top/full_in_AXI_TLAST -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_decode_top/full_in_AXI_TUSER -into $tb_return_group -radix hex
+## add_wave /apatb_decode_top/full_in_AXI_TSTRB -into $tb_return_group -radix hex
+## add_wave /apatb_decode_top/full_in_AXI_TKEEP -into $tb_return_group -radix hex
+## add_wave /apatb_decode_top/full_in_AXI_TDATA -into $tb_return_group -radix hex
+## save_wave_config decode.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+find kernel block.
+// RTL Simulation : 1 / 1 [100.00%] @ "147725000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 147785 ns : File "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/sim/verilog/decode.autotb.v" Line 343
+run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 3491.473 ; gain = 0.000 ; free physical = 7694 ; free virtual = 13840
+## quit
+INFO: xsimkernel Simulation Memory Usage: 167796 KB (Peak: 200740 KB), Simulation CPU Usage: 11190 ms
+INFO: [Common 17-206] Exiting xsim at Tue Feb 27 15:40:40 2024...
+INFO: [COSIM 212-316] Starting C post checking ...
+1722	486	7	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	7	29	16	25	83	57	239	 
+5	1	0	0	0	0	0	0	0	0	0	0	67108863	67108863	67108863	67108863	67108863	67108863	67108863	0	0	0	0	0	0	0	0	52	 
+4	4	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	349	 
+5	5	4	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	137	 
+4	74	198	239	485	434	440	255	96	9	3	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	5	169	 
+24	468	1362	3462	28745	174900	276399	246979	112837	21485	8894	4266	4737	1880	535	61	34	34	29	40	32	61	24	5	3	7	5	176	 
+4	57	273	1811	57369	1552046	5370352	10351267	6585430	1429368	603377	300887	283716	123022	79187	17332	10343	11073	12523	14495	7635	12788	2830	104	26	32	13	238	 
+5	84	167	1100	56818	3507522	30307577	54185055	53987472	36643601	24353329	13113178	12166069	10073742	11795621	8627685	4615661	2559742	4143691	4797842	1385763	606919	16358	192	97	44	7	146	 
+98	1756	828	1555	45201	3236350	38726850	61240789	63560429	59329917	53572837	48706985	49739933	52917344	53798991	52831396	45322330	36866073	44344158	50836270	29882854	3101363	24882	381	476	96	13	168	 
+230	1077	408	1164	21629	1124664	14306414	45048934	54604360	41697346	34395057	36305421	39105983	43655980	45457705	38651397	31204276	31935251	48226724	62093259	58879402	20457154	188072	1651	992	50	5	51	 
+78	260	138	470	4005	73953	713695	4152786	8688486	5017325	5977935	8259085	9306816	9718976	10888886	8030081	8815593	17904191	41100438	63170773	62380455	30024887	305908	2810	1137	51	6	59	 
+96	203	237	821	1889	11837	35073	117768	209628	163833	335402	943463	1291030	1687035	2024309	1402046	2651407	8821285	38597741	63791029	58983809	13485725	162754	2454	1385	34	5	89	 
+229	339	679	676	432	815	735	2024	4382	12029	46607	193813	298221	414455	585830	810209	3064664	16245761	53961756	62974447	34761842	1148920	15015	749	893	14	3	67	 
+274	255	331	90	51	27	20	69	245	1599	7796	54060	127014	252212	548257	1240053	6401452	40383133	61303955	53259648	4847699	38167	1275	188	245	11	2	27	 
+283	85	22	2	1	0	0	2	9	78	945	13036	79565	441327	1607188	6619770	31991185	59615184	60435571	21692566	389441	4033	235	92	249	20	3	30	 
+569	656	237	30	6	1	0	0	0	13	306	3376	14531	105230	1783720	31177097	62336867	64722954	49722261	1888676	52834	683	105	225	759	68	8	131	 
+1288	552	111	5	0	0	0	0	0	3	85	516	1911	30654	3317024	51993650	64246545	59073458	9965615	167716	16580	313	156	214	369	83	9	254	 
+607	94	6	0	0	0	0	0	0	2	75	334	2151	175421	16070056	63122676	65425968	40264425	1235810	27203	3876	90	63	75	205	234	44	1224	 
+298	24	1	0	0	0	0	0	0	3	158	1663	37119	4197727	51588531	65640788	62701463	6300841	81346	2946	1228	110	306	677	1288	1133	371	5146	 
+436	80	6	0	0	0	0	0	0	3	158	3942	310133	25772169	64660199	64589352	28618172	160675	5442	1870	1996	340	2347	2292	971	619	155	3531	 
+723	127	2	0	1	5	4	2	1	14	1151	46684	4997811	56908058	65532229	48493823	1634906	8455	980	831	904	121	833	947	640	730	166	5897	 
+1510	258	3	0	6	52	53	18	17	307	20694	691934	34213842	65367807	64653237	13724682	100751	750	221	156	106	28	155	159	307	295	99	3507	 
+1208	226	3	0	9	133	112	49	145	4219	203877	5349824	57848991	65577659	54254861	790351	3369	42	33	22	11	4	20	29	100	145	56	2221	 
+1482	258	3	0	1	9	8	13	105	4652	513112	28981717	65408961	63353464	13838494	72084	899	22	13	12	15	11	50	78	271	265	74	4142	 
+766	262	2	0	2	5	5	9	82	7208	2042035	52000673	66142984	59704343	4891798	36612	728	10	4	3	4	10	62	108	280	269	103	11629	 
+2294	1209	9	0	11	56	31	36	265	50314	10230711	63362889	66263044	47732427	2640387	21509	538	4	0	0	3	36	341	370	487	138	81	11097	 
+2544	886	10	0	75	1244	413	415	1846	142501	16176716	61151117	63096498	17526553	835122	25435	1824	12	0	0	4	61	659	443	235	28	11	1505	 
+768	82	1	0	297	772	722	2035	7765	350217	5712112	22385477	18575086	2862355	436560	39131	7736	76	7	4	6	71	337	253	106	11	6	489	 
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 213.1 seconds. CPU system time: 7.07 seconds. Elapsed time: 177.77 seconds; current allocated memory: 23.750 MB.
+INFO: [HLS 200-112] Total CPU user time: 216.25 seconds. Total CPU system time: 7.51 seconds. Total elapsed time: 186.51 seconds; peak allocated memory: 246.715 MB.

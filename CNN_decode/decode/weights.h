@@ -1,7 +1,6 @@
 #ifndef WEIGHTS_H
 #define WEIGHTS_H
-#include "ap_fixed.h"
-typedef ap_fixed<40,10> data_t;
+#include "type.h"
 
 data_t bias_conv4[8]={0.6474334,0.5021539,0.15455641,0.78605837,0.30350417,-0.5095227,0.54400295,0.6221989};
 data_t bias_conv5[8]={0.056719672,0.43973938,0.593019,0.1334745,0.14024757,-0.36339596,0.28529936,-0.033020418};

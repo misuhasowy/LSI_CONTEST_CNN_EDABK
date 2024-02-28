@@ -1,7 +1,6 @@
 #ifndef INPUT_DECODE_H
 #define INPUT_DECODE_H
-#include "ap_fixed.h"
-typedef ap_fixed<40,10> data_t;
+#include "type.h"
 data_t input_decode[4*4*8]= 
 {
     1.2640259,2.2129555,2.8989148,4.2019453,0.32399964,0,1.8823936,3.528327,

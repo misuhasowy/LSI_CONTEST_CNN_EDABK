@@ -1,0 +1,40 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'edabk' on host 'edabk-HP-280-Pro-G8-Microtower-PC' (Linux_x86_64 version 5.15.0-97-generic) on Wed Feb 28 11:48:07 +07 2024
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK'
+Sourcing Tcl script '/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/autoencoder1/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: source /home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/autoencoder1/solution1/csynth.tcl
+INFO: [HLS 200-1510] Running: open_project autoencoder1 
+INFO: [HLS 200-10] Opening project '/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/autoencoder1'.
+INFO: [HLS 200-1510] Running: set_top AutoEncoder 
+INFO: [HLS 200-1510] Running: add_files AutoEncoder.cpp 
+WARNING: [HLS 200-40] Cannot find design file 'AutoEncoder.cpp'
+INFO: [HLS 200-1510] Running: add_files -tb AutoEncoder_test.cpp 
+WARNING: [HLS 200-40] Cannot find test bench file 'AutoEncoder_test.cpp'
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/autoencoder1/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Cannot find source file AutoEncoder.cpp; skipping it.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.227 GB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.227 GB.
+ERROR: [HLS 200-70] Cannot find any design unit to elaborate.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 0.000 MB.
+Error in linking the design.
+    while executing
+"source /home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/autoencoder1/solution1/csynth.tcl"
+    invoked from within
+"hls::main /home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/autoencoder1/solution1/csynth.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 2.52 seconds. Total CPU system time: 0.47 seconds. Total elapsed time: 2.09 seconds; peak allocated memory: 1.227 GB.

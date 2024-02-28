@@ -1,8 +1,7 @@
 #ifndef __ACTIVATIONS_H
 #define __ACTIVATIONS_H
 #include "hls_math.h"
-#include "ap_fixed.h"
-typedef ap_fixed<40,10> data_t;
+#include "type.h"
 
 data_t relu(data_t a)
 {

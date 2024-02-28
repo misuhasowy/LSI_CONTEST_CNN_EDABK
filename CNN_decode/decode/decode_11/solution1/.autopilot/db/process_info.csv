@@ -1,0 +1,10 @@
+,castIn_U0,,status1.csv
+,conv4_U0,,status2.csv
+,upsamp4_U0,,status3.csv
+,conv5_U0,,status4.csv
+,upsamp5_U0,,status5.csv
+,conv6_U0,,status6.csv
+,upsamp6_U0,,status7.csv
+,conv7_U0,,status8.csv
+,castOut_U0,,status9.csv
+,AESL_inst_decode,,module_status1.csv

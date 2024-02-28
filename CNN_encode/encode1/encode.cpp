@@ -1,9 +1,44 @@
 #include"encode.h"
 #include <iostream>
-#include <hls_stream.h>
+
 #include "defines.h"
 #include "weights.h"
 #include "activation.h"
+
+static const int SIZE = 28 * 28;
+
+void castIn(hls::stream<axis_dtype> &input_stream_axis, hls::stream<data_t> &input_stream_fixed) {
+    for (int i = 0; i < SIZE; i++) {
+#pragma HLS PIPELINE
+        // Read from the input AXI Stream
+        axis_dtype signal_reg = input_stream_axis.read();
+
+        // Perform type conversion using range method
+        data_t tmp;
+        tmp = *reinterpret_cast<data_t*>(&signal_reg.data);
+
+        // Write to the output floating-point stream
+        input_stream_fixed.write(tmp);
+    }
+}
+
+void castOut(hls::stream<data_t> &output_stream_fixed, hls::stream<axis_dtype> &output_stream_axis) {
+    for (int i = 0; i < 128; i++) {
+#pragma HLS PIPELINE
+        // Copy the current value of signal_reg to a new variable
+        axis_dtype x;
+
+        // Read from the floating-point output stream
+        data_t raw_data = output_stream_fixed.read();
+
+        // Perform type conversion using range method
+        x.data = *reinterpret_cast<ap_uint<32>*>(&raw_data);
+
+        // Write to the output AXI Stream
+        output_stream_axis.write(x);
+    }
+}
+
 
 template<typename T>
 void sp_conv(int acti,int padding,int fil_in,int fil_out,int width, int height, T *linebuf,T *win,T *bias2, hls::stream<T> &src,T *ker, hls::stream<T> &dst) {
@@ -120,6 +155,7 @@ void sp_pool(int padding,int fil,int width, int height, T *pool_buf, T *pool_win
 }
 
 
+
 void conv1(hls::stream<data_t> &src_img, hls::stream<data_t> &dst_img) {
     data_t linebuf1[(K - 1) * (IMG_WIDTH + 2)];
     #pragma HLS ARRAY_PARTITION variable=linebuf1 complete dim=1
@@ -159,9 +195,12 @@ void pool3(hls::stream<data_t> &in_pl3, hls::stream<data_t> &out_pl3){
     sp_pool<data_t>(1,NUM_FILTERS_3,CONV3_WIDTH,CONV3_HEIGHT,pool_buf3,pool_win3,in_pl3,out_pl3);
 }
 
-void encode(hls::stream<data_t> &full_in,hls::stream<data_t> &full_out){
-    #pragma HLS INTERFACE axis port=full_in depth=784
-    #pragma HLS INTERFACE axis port=full_out depth=128
+void encode(hls::stream<axis_dtype> &full_in_AXI, hls::stream<axis_dtype> &full_out_AXI){
+    hls::stream<data_t> full_in_float;
+    hls::stream<data_t> full_out_float;
+
+    #pragma HLS INTERFACE axis port=full_in_AXI depth=784
+    #pragma HLS INTERFACE axis port=full_out_AXI depth=128
     #pragma HLS DATAFLOW
 
     hls::stream<data_t> conv1_out("conv1_out");
@@ -177,10 +216,12 @@ void encode(hls::stream<data_t> &full_in,hls::stream<data_t> &full_out){
     hls::stream<data_t> pool3_out("pool3_out");
     #pragma HLS INTERFACE axis port=pool3_out depth=128
 
-    conv1(full_in, conv1_out);
+    castIn(full_in_AXI, full_in_float);
+    conv1(full_in_float,conv1_out);
     pool1(conv1_out,pool1_out);
     conv2(pool1_out,conv2_out);
     pool2(conv2_out,pool2_out);
     conv3(pool2_out,conv3_out);
-    pool3(conv3_out,full_out);
+    pool3(conv3_out,full_out_float);
+    castOut(full_out_float, full_out_AXI);
 }

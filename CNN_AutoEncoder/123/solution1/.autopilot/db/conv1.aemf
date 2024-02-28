@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1709053173978">
+  <ports id="1" name="full_in_float14" type="PortType" coreId="31" bitwidth="32" iftype="IfTypeRom">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="conv1_out16" type="PortType" coreId="31" bitwidth="32" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <edges id="11" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="12" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@ports.1"/>
+  <regions anchor_node="-1" region_type="16" typeName="Dataflow" iiViolation="" id="31" RegionName="conv1">
+    <basic_blocks id="8" name="conv1" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="6" name="_ln0" rtlName="conv1_Loop_CHeight_proc20_U0" coreId="1634881568" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <dataInputObjs>full_in_float14</dataInputObjs>
+        <dataOutputObjs>conv1_out16</dataOutputObjs>
+        <constName>conv1_Loop_CHeight_proc20</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="7" name="_ln180" lineNumber="180" fileName="AutoEncoder.cpp" fileDirectory=".." coreId="1634881568" contextFuncName="conv1" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="AutoEncoder.cpp" linenumber="180" fileDirectory="/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/auto/CNN_AutoEncoder" functionName="conv1"/>
+      </node_objs>
+      <fileValidLineNumbers fileName="AutoEncoder.cpp">
+        <validLinenumbers>180</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <moduleNodes realName="grp_conv1_Loop_CHeight_proc20_fu_18">
+    <nodeIds>6</nodeIds>
+  </moduleNodes>
+  <ioPorts name="conv1_out16">
+    <contents name="call">
+      <nodeIds>6</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="full_in_float14">
+    <contents name="call">
+      <nodeIds>6</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="2"/>
+      <operations id="7" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="conv1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="14403" mMaxLatency="14403" mIsDfPipe="true">
+      <basicBlocks>8</basicBlocks>
+      <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst">
+        <processe_list name="conv1_Loop_CHeight_proc20_U0" ssdmobj_id="6">
+          <pins>
+            <port name="full_in_float14" top_port_object_id="" top_port_object_id_reference="_12" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="conv1_Loop_CHeight_proc20_U0" ssdmobj_id="6" object_id="_17"/>
+          </pins>
+          <pins>
+            <port name="conv1_out16" dir="DirOut" top_port_object_id="" top_port_object_id_reference="_13" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="conv1_Loop_CHeight_proc20_U0" ssdmobj_id="6" object_id="_17"/>
+          </pins>
+        </processe_list>
+      </mDfPipe>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>
