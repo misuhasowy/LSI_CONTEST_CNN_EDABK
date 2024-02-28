@@ -1,7 +1,0 @@
-,full_in_float_U,,chan_status1.csv
-,conv1_out_U,,chan_status2.csv
-,pool1_out_U,,chan_status3.csv
-,conv2_out_U,,chan_status4.csv
-,pool2_out_U,,chan_status5.csv
-,conv3_out_U,,chan_status6.csv
-,full_out_float_U,,chan_status7.csv
