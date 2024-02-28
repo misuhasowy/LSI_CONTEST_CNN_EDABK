@@ -1,1 +1,0 @@
-set ::AESL_AUTOSIM::gTopFileName /home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/CNN_decode/decode/decode_11/solution1/./sim/autowrap/testbench/decode.cpp_pre.cpp.tb.cpp
