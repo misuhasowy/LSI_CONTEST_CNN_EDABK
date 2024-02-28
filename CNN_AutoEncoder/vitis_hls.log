@@ -1,0 +1,50 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'edabk' on host 'edabk-HP-280-Pro-G8-Microtower-PC' (Linux_x86_64 version 5.15.0-97-generic) on Wed Feb 28 11:50:14 +07 2024
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/auto/CNN_AutoEncoder'
+Sourcing Tcl script '/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/auto/CNN_AutoEncoder/123/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: source /home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/auto/CNN_AutoEncoder/123/solution1/export.tcl
+INFO: [HLS 200-1510] Running: open_project 123 
+INFO: [HLS 200-10] Opening project '/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/auto/CNN_AutoEncoder/123'.
+INFO: [HLS 200-1510] Running: set_top AutoEncoder 
+INFO: [HLS 200-1510] Running: add_files AutoEncoder.cpp 
+INFO: [HLS 200-10] Adding design file 'AutoEncoder.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb AutoEncoder_test.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'AutoEncoder_test.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/auto/CNN_AutoEncoder/123/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./123/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name AutoEncoder AutoEncoder 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+ERROR: [Project 1-202] Error writing the XML file '/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/auto/CNN_AutoEncoder/123/solution1/impl/ip/tmp.xpr'
+ERROR: [Common 17-69] Command failed: ERROR: [Project 1-202] Error writing the XML file '/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/auto/CNN_AutoEncoder/123/solution1/impl/ip/tmp.xpr'
+
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 28 11:52:36 2024...
+ERROR: [IMPL 213-28] Failed to generate IP.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 84.8 seconds. CPU system time: 1.92 seconds. Elapsed time: 145.38 seconds; current allocated memory: -982.293 MB.
+couldn't change working directory to "/home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/auto/CNN_AutoEncoder": no such file or directory
+    while executing
+"source /home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/auto/CNN_AutoEncoder/123/solution1/export.tcl"
+    invoked from within
+"hls::main /home/edabk/Downloads/son/LSI_CONTEST_CNN_EDABK/auto/CNN_AutoEncoder/123/solution1/export.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 86.8 seconds. Total CPU system time: 2.37 seconds. Total elapsed time: 146.96 seconds; peak allocated memory: 274.246 MB.

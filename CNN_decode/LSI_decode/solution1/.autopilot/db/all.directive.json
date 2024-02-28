@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "decode",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/edabk\/Downloads\/son\/LSI_CONTEST_CNN_EDABK\/CNN_decode\/decode\/decode_11\/solution1\/csynth.tcl",
+          "sourceLine": "16",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "decode"
+              }]
+          }
+        }]
+    }]}

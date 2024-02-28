@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "AutoEncoder",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/edabk\/Downloads\/son\/LSI_CONTEST_CNN_EDABK\/auto\/CNN_AutoEncoder\/123\/solution1\/csynth.tcl",
+          "sourceLine": "14",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "AutoEncoder"
+              }]
+          }
+        }]
+    }]}

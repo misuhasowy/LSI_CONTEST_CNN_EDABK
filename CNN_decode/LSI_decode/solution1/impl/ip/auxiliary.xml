@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="decode" xd:componentRef="decode" xd:initiationInterval="14457" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="full_in_AXI" xd:originalName="full_in_AXI" xd:direction="in" xd:interfaceRef="full_in_AXI" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="full_out_AXI" xd:originalName="full_out_AXI" xd:direction="out" xd:interfaceRef="full_out_AXI" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="14570" xd:worst-case="14570" xd:average-case="14570"/>
+  <xd:resourceEstimates xd:LUT="245807" xd:FF="216705" xd:BRAM="0" xd:DSP="4918"/>
+</xd:acceleratorMap>
