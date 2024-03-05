@@ -1,4 +1,4 @@
-# LSI_CONTEST_CNN_EDABK
+![image](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/127b23ef-fcce-4860-9462-6bb017e31165)# LSI_CONTEST_CNN_EDABK
 Project Overview
 
 Introduction
@@ -42,8 +42,13 @@ To run the program, you need the following tools:
 - VIVADO version > 2022.1
 
 After cloning the repository, create a new project. Choose the top file as encode.cpp/decode.cpp and select encode_test/decode_test as the testbench file. Proceed to run Synthesis, Simulation, and Cosimulation. These steps will generate files similar to those in the git repository.
+result after simulation
+![image](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/9f4052bb-7eaf-4912-9a03-16d8ac10258f)
+![image](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/2890e46f-2e29-47a4-bf6e-dbe6726f9c40)
+![image](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/521f2cc5-241c-402d-8beb-9f9634a71aaf)
 
 To view the waveform, select Dump Trace -> all, and tick "full" in Extra Options for Dataflow. The waveform will then be displayed.
+![Screenshot from 2024-02-27 16-53-50 (2)](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/9d5510cc-5096-4ae4-90dd-d8a2f1b973ae)
 
 Generating the Circuit
 - Open Vivado -> Create a new project -> RTL Project -> Add Source.
