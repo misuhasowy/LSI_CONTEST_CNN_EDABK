@@ -69,3 +69,153 @@ Detail in Implementation
 ![1](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/3b197e47-1967-4fea-a8d8-633598ec00ed)
 Next, press Quick Start inside Create Project on the top left .File > Project > New... 
 Create a New Vivado Project A window will appear, so Next press to proceed. The next Project Name screen will be to configure the settings, so Project location let's put the directory of her Vitis HLS project that we created two days ago (/path/to/test). Project name can be anything, so project_1 leave it at the default.
+![2](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/dae9bc75-c6c3-4f31-8c6f-56be0293a845)
+ Next, you will see the Default Part screen, so select the part or board you are using. This time it 's the Zynq UltraScale+ MPSoC ZCU104 Evaluation Kit , so move to the Boards tab, select Zynq UltraScale+ MPSoC ZCU104 Evaluation Board , and press Next.
+Finally, I think that will appear New Project Summary, so press
+Finish it and you're done.
+2. Creating the circuit
+  Once you have finished creating the project, you should see a screen like the one below. If you have closed it once , you can open the project by starting Vivado, File > Project > Open...selecting the top right corner, and selecting ./path/to/test/project_1.xpr
+  ![3](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/c5e949ac-2aa3-42a1-a0db-f65c049d0b2f)
+3.Adding the CNN ip
+   First, edit the IP Catalog to read the IP created by high-level synthesis last time . When you click on it, a tab called IP Catalog will appear in the upper right panel. Next, right-click anywhere near where Vivado Repository is lined up and select Add Repository... from the list that appears . In the window that appears, select the folder containing the IP you created last time. In my case, it is /path/to/test/solution1/impl/ip .
+  ![4](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/2bf37e9a-659d-46b7-9df9-9653d373bc81)
+If you have added it correctly, 1 repository was added to the project. For more information related to disabled IPs, please refer to IP Catalog.you will see a message like this, so press OK to exit.
+4. Creating block design
+  Once the IP has been added, we will create a Block Design . First, select IP INTEGRATOR > Create Block Design from the Flow Navigator on the left. A window called Create Block Design will appear, so just press OK . You can edit the Design name as you like, but I think the default design_1 is fine. Once created, a Diagram tab will appear in the upper right panel.
+5. Creating a Diagram
+  First, let's add the IP. To add an IP, press ➕ or right-click the  white part inside Diagram and select Add IP... . A list of IPs will appear, so search for the IP you want to add and click on it.
+First, insert the parts or boards you are using. This time we will install Zynq UltraScale + MPSoC, so if you search for zynq, it will come up and you should be able to add it.
+Next, add the following IPs: Processor System Reset, AXI Timer, AXI Interconnect, Concat, VCU, VCU DDR4 controller.
+And then Run connect automation we get the the main system block design below
+![5](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/b2f2302a-5711-464f-971e-9d282d415fee)
+Next, add the AXI Direct Memory Access. Double-click DMA, uncheck Enable Scatter Gather Engine, change Width of Buffer Length Register from 14 to 26, and set the number of data to be sent at one time in the place where the length of data to be sent at one time is stored. If you want to increase it, you need to increase it.
+Change Enable Read Channel > Max Burst Size from 16 to 256 and specify the maximum number of data to be transferred in bursts.
+Change Enable Write Channel > Max Burst Size from 16 to 256. Change to . DMA settings You can add your own IP first. When you place your mouse over the port, it will change to a pencil-like mark, so if you click and drag it a little, the line will stretch, so all you have to do is find the desired port and click again to connect the lines. If you have connected by mistake, right-click and select Delete to delete it.
+Specifically, connect the following three lines. Concat > dout and Zynq UltraScale + MPSoC > pl_ps_irq0 , Concat > in1 
+We recommend that you save once you have created this. This is because if you once generate a bitstream in a Vivado project, edit the IP, etc., and generate the bitstream again, you may suffer from a bug caused by a mysterious cache. Therefore, if possible, it is better to create a new project when performing high-level synthesis of IP.
+Connect port from CNN block to DMA this below:
+![6](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/964ec850-245b-407b-9bf3-2a670cbdf294)
+After that, We will then add this CNN block and DMA to our main system block design, the CNN block only connected with DMA block, Process System Reset block and Clock Wizard block. On the other hand, the DMA block connected to MPSoC through AXI interconnect block.
+Next, perform Validate Design (☑︎) to check whether the correct circuit has been created. If a message like Validation successful. There are no errors or critical warnings in this design. appears, it is a success. I think it's probably okay, but if you get an error, please google the error message and look it up... Finally, create a Wrapper for this circuit and it's complete. Move to the Sources tab at the top left, right-click the design_1 location in Design Sources, and click Create HDL Wrapper... from the options that appear.
+6. Generate bitstream and Export the Hardware
+  Next, we will create a bitstream. However, there is little work to be done here, and basically it will be completed if you wait. Now that you have Vivado open, select PROGRAM AND DEBUG > Generate Bitstream from the Flow Navigator on the left. You will be told that there are no implementation results, but they say they will create them automatically, so press Yes to proceed. Next, a window called Launch Runs will appear. Set the number of jobs etc. appropriately (if you don't know, the default is fine) and press OK to start Generate Bitstream. It will take some time, so please be patient. If Bitstream Generation successfully completed. is displayed, it is complete. Leave Open Implemented Design (default) and press OK to check the completed circuit. 
+After that, we export the Hardware with the file .xsa. This button is in File > Export > Export the Hardware. Then it can be completed by choosing the folder path for the Hardware file (.xsa)
+Note: Please note that the CNN IP that we upload for all you guys on the github is generated from the Vitis 2022.2 and the circuit is designed in Vivado has the version 2018.3. Normally, after we designed the CNN IP on Vitis 2022.2, we downgrade the Vitis to version 2018.3 and generated once more time and add this IP to the circuit in Vivado 2018.3. This process can take bugs because of the compatible of version Vitis, Vivado and the Operating System on your computer.
+7. Create Petalinux project, export HW and set general configurations
+  - Once the programmable logic is defined and exported, the PetaLinux project can be created. Due to the difficulties at download and install all the tools with the certain versions it is highly recommended to use a virtual environment. In this project, the default Python virtual environment for Linux has been used. 
+Before start using PetaLinux, the file settings.sh from the PetaLinux installation file needs to be sourced to Ubuntu using this command line:
+$: source <path to petalinux .sh file>/settings64.sh
+This is full flow for build petalinux: 
+1. Source file .sh
+source <petaLinux_tool_install_dir>/settings.sh
+2. Generate folder for build
+petalinux-create --type project --template zynqMP --name zcu104_petalinux
+3. 
+cd zcu104_petalinux
+4. Get hardware file .xsa
+petalinux-config --get-hw-description= .xsa
+5. 
+DTG Settings-> zcu104-revc
+DTG Settings-> Network sstate feeds URL-> change: v${PETALINUX_MAJOR_VER} to v2022.2
+Image Packaging Configuration → Root file System type → SD card
+Yocto Settings → (xilinx-zcu104) YOCTO_MACHINE_NAME
+6. Add user package:
+petalinux_project_dir>/project-spec/meta-user/conf/user-rootfsconfig
+add:
+CONFIG_xrt
+CONFIG_dnf
+CONFIG_e2fsprogs-resize2fs
+CONFIG_parted
+CONFIG_resize-part
+CONFIG_packagegroup-petalinux-vitisai
+...
+CONFIG_gstreamer-vcu-examples
+
+
+
+
+7. 
+petalinux-config -c rootfs	
+Image Features-> Disable ssh-server-dropbear and enable ssh-server-openssh-> enable package-management and debug_tweaks
+Filesystem Packages-> misc->packagegroup-core-ssh-dropbear and disable packagegroup-core-ssh-dropbear
+Filesystem Packages-> console -> network -> openssh and enable openssh, openssh-sftp-server, openssh-sshd, openssh-scp
+8. 
+petalinux-config -c kernel
+turn off:
+CPU Power Management > CPU Idle > CPU idle PM support
+CPU Power Management > CPU Frequency scaling > CPU Frequency scaling
+9. Update device tree
+go to: project-spec/meta-user/recipes-bsp/device-tree/files/system-user.dtsi
+add: 
+&sdhci1 {
+      no-1-8-v;
+      disable-wp;
+};
+10.
+petalinux-config
+	
+Image Packaging Configuration-> Root File System Type-> ETX4
+DTG settings -> Kernel Bootargs -> generate boot args automatically to NO
+update User Set Kernel Bootargs to earlycon console=ttyPS0,115200 clk_ignore_unused root=/dev/mmcblk0p2 rw rootwait cma=512M
+11.
+filesystem Packages → misc → python3 → all
+filesystem Packages → misc → python3-async
+filesystem Packages → misc → python3-git
+filesystem Packages → misc → python3-gitdb
+filesystem Packages → misc → python3-setuptools
+filesystem Packages → misc → python3-smmap
+filesystem Packages → x11 → base → libdrm → libdrm
+filesystem Packages → x11 → base → libdrm → libdrm-tests
+filesystem Packages → x11 → base → libdrm → libdrm-kms
+Petalinux Package Groups → packagegroup-petalinux-matchbox
+Petalinux Package Groups → packagegroup-petalinux-x11
+filesystem Packages → libs → opencv → opencv, opencv – apps
+filesystem Packages → misc → gst-player
+filesystem Packages → misc → gst-plugins-base → base, apps
+filesystem Packages → misc → gst-plugins-good
+filesystem Packages → misc → gstreamer1.0-meta-base → base, video, x11
+filesystem Packages → misc → gstreamer1.0-plugins-bad
+filesystem Packages → misc → gstreamer1.0-plugins-base → base, apps
+filesystem Packages → misc → gstreamer1.0-plugins-good
+filesystem Packages → misc → openamp-fw-echo-testd
+filesystem Packages → misc → openamp-fw-mat-muld
+filesystem Packages → misc → openamp-fw-rpc-demo
+filesystem Packages → misc → v4l-utils → v4l-utils, libv4l, irkeytable, media-ctl, rc-keymaps
+filesystem Packages → multimedia → all gstreamer
+Petalinux Package Groups → packagegroup-petalinux-gstreamer
+Petalinux Package Groups → packagegroup-petalinux-openamp
+Petalinux Package Groups → packagegroup-petalinux-opencv
+Petalinux Package Groups → packagegroup-petalinux-v4lutils
+user packages → all
+12. 
+petalinux-build	
+petalinux-package --boot --format BIN --fsbl images/linux/zynqmp_fsbl.elf --u-boot images/linux/u-boot.elf --pmufw images/linux/pmufw.elf --atf images/linux/bl31.elf --fpga images/linux/system.bit --force
+	
+          &sdhci1 { /* FIXME - on CC - MIO 39 - 51 */
+          status = "okay";
+          no-1-8-v;
+          disable-wp;
+          broken-cd;
+          xlnx,mio-bank = <1>;
+          /* Do not run SD in HS mode from bootloader */
+          sdhci-caps-mask = <0 0x200000>;
+           sdhci-caps = <0 0>;
+           max-frequency = <19000000>;
+};
+4. Preparing for Pynq MPSoC ZCU104
+To boot from SD card, it is necessary to properly configure it and store the files. In this project, 2 partitions are needed for the SD card:
+-	boot partition: FAT32 format. ≥ 60 MB. boot.bin and image.ub files.
+-	root partition: Ext4 format. ≥ 3 GB. rootfs.tar.gz file.
+HW Components description in order to boot from SD card. This is 1110 (ON, ON, ON, OFF) as shown in Figure below.
+![7](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/0b6ffb09-248c-498b-adb7-ce3eb7a75160)
+
+Set the mode to boot from the micro SD card 
+Dip switch 1 (mode 0): On (bottom side as shown in the photo) 
+Dip switch 2 (mode 1): Off (same as above) 
+Dip switch 3 (mode 2): Off ( (Same as above) 
+Dip switch 4 (Mode 3): Off (Same as above) 
+Connect the 12V power cable. There is a top and bottom, so be careful not to make mistakes 
+Insert the micro SD card into the card slot on the board 
+Connect the USB JTAG UART MicroUSB port on the board to your PC with a USB cable 
+Turn on the power
+When you turn on the power, if you see several red and yellow LEDs flashing, you will know that the power is being supplied properly. Additionally, you will know that the system is booting when the red LED turns yellow. If things are not going well, it is often the case that the type of Dip Switch or PYNQ image is incorrect, so please reconsider. If you are still having trouble, try re-inserting the boot.bin and image.ub onto the micro SD card. If the startup actually succeeds, it will look like this. It may take about a minute to start up, so please don't worry.
