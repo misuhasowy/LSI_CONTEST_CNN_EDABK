@@ -54,3 +54,5 @@ Generating the Circuit
 - Open Vivado -> Create a new project -> RTL Project -> Add Source.
 - In the "Add Source" section, choose "add directory" and select LSI_encoder -> encoder_full -> syn -> verilog.
 - Click "Next" through the wizard and click "Open Elaborated Design" to observe the generated circuit.
+![1234 (1)](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/163b17da-3783-4786-bf93-a0b0f942b571)
+
