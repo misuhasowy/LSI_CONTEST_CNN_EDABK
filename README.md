@@ -1,5 +1,5 @@
 
-Project Overview
+**Project Overview**
 
 Introduction
 Welcome to the LSI_CONTEST_CNN_EDABK repository! This project focuses on implementing a Convolutional Neural Network (CNN) using C++ code generated from High-Level Synthesis (HLS). Our primary objective is to enhance the speed and efficiency of image compression while minimizing storage requirements for compressed data. Specifically, the project employs the MNIST dataset, consisting of 28x28 images, for compression and decoding experiments.
@@ -62,3 +62,10 @@ Create Ip block
 - Open block Design -> Choose AutoEncoder -> Result
 ![1234 (1)](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/163b17da-3783-4786-bf93-a0b0f942b571)
 
+Detail in Implementation 
+ 1. Creating a Vivado project
+- First, start Vivado and create a project.
+- I think the best way to start it is to search for Vivado in the GUI, or use terminal etc. 
+![1](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/3b197e47-1967-4fea-a8d8-633598ec00ed)
+Next, press Quick Start inside Create Project on the top left .File > Project > New... 
+Create a New Vivado Project A window will appear, so Next press to proceed. The next Project Name screen will be to configure the settings, so Project location let's put the directory of her Vitis HLS project that we created two days ago (/path/to/test). Project name can be anything, so project_1 leave it at the default.
