@@ -1,4 +1,4 @@
-![image](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/127b23ef-fcce-4860-9462-6bb017e31165)# LSI_CONTEST_CNN_EDABK
+
 Project Overview
 
 Introduction
