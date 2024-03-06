@@ -70,33 +70,54 @@ Detail in Implementation
 Next, press Quick Start inside Create Project on the top left .File > Project > New... 
 Create a New Vivado Project A window will appear, so Next press to proceed. The next Project Name screen will be to configure the settings, so Project location let's put the directory of her Vitis HLS project that we created two days ago (/path/to/test). Project name can be anything, so project_1 leave it at the default.
 ![2](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/dae9bc75-c6c3-4f31-8c6f-56be0293a845)
- Next, you will see the Default Part screen, so select the part or board you are using. This time it 's the Zynq UltraScale+ MPSoC ZCU104 Evaluation Kit , so move to the Boards tab, select Zynq UltraScale+ MPSoC ZCU104 Evaluation Board , and press Next.
+
+Next, you will see the Default Part screen, so select the part or board you are using. This time it 's the Zynq UltraScale+ MPSoC ZCU104 Evaluation Kit , so move to the Boards tab, select Zynq UltraScale+ MPSoC ZCU104 Evaluation Board , and press Next.
 Finally, I think that will appear New Project Summary, so press
 Finish it and you're done.
+
 **2. Creating the circuit**
+
   Once you have finished creating the project, you should see a screen like the one below. If you have closed it once , you can open the project by starting Vivado, File > Project > Open...selecting the top right corner, and selecting ./path/to/test/project_1.xpr
   ![3](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/c5e949ac-2aa3-42a1-a0db-f65c049d0b2f)
+  
 **3.Adding the CNN ip**
+
    First, edit the IP Catalog to read the IP created by high-level synthesis last time . When you click on it, a tab called IP Catalog will appear in the upper right panel. Next, right-click anywhere near where Vivado Repository is lined up and select Add Repository... from the list that appears . In the window that appears, select the folder containing the IP you created last time. In my case, it is /path/to/test/solution1/impl/ip .
   ![4](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/2bf37e9a-659d-46b7-9df9-9653d373bc81)
 If you have added it correctly, 1 repository was added to the project. For more information related to disabled IPs, please refer to IP Catalog.you will see a message like this, so press OK to exit.
+
 **4. Creating block design**
+
   Once the IP has been added, we will create a Block Design . First, select IP INTEGRATOR > Create Block Design from the Flow Navigator on the left. A window called Create Block Design will appear, so just press OK . You can edit the Design name as you like, but I think the default design_1 is fine. Once created, a Diagram tab will appear in the upper right panel.
+  
 **5. Creating a Diagram**
+
   First, let's add the IP. To add an IP, press ➕ or right-click the  white part inside Diagram and select Add IP... . A list of IPs will appear, so search for the IP you want to add and click on it.
+  
 First, insert the parts or boards you are using. This time we will install Zynq UltraScale + MPSoC, so if you search for zynq, it will come up and you should be able to add it.
+
 Next, add the following IPs: Processor System Reset, AXI Timer, AXI Interconnect, Concat, VCU, VCU DDR4 controller.
+
 And then Run connect automation we get the the main system block design below
+
 ![5](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/b2f2302a-5711-464f-971e-9d282d415fee)
+
 Next, add the AXI Direct Memory Access. Double-click DMA, uncheck Enable Scatter Gather Engine, change Width of Buffer Length Register from 14 to 26, and set the number of data to be sent at one time in the place where the length of data to be sent at one time is stored. If you want to increase it, you need to increase it.
+
 Change Enable Read Channel > Max Burst Size from 16 to 256 and specify the maximum number of data to be transferred in bursts.
+
 Change Enable Write Channel > Max Burst Size from 16 to 256. Change to . DMA settings You can add your own IP first. When you place your mouse over the port, it will change to a pencil-like mark, so if you click and drag it a little, the line will stretch, so all you have to do is find the desired port and click again to connect the lines. If you have connected by mistake, right-click and select Delete to delete it.
+
 Specifically, connect the following three lines. Concat > dout and Zynq UltraScale + MPSoC > pl_ps_irq0 , Concat > in1 
 We recommend that you save once you have created this. This is because if you once generate a bitstream in a Vivado project, edit the IP, etc., and generate the bitstream again, you may suffer from a bug caused by a mysterious cache. Therefore, if possible, it is better to create a new project when performing high-level synthesis of IP.
 Connect port from CNN block to DMA this below:
+
 ![6](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/88100632/964ec850-245b-407b-9bf3-2a670cbdf294)
+
 After that, We will then add this CNN block and DMA to our main system block design, the CNN block only connected with DMA block, Process System Reset block and Clock Wizard block. On the other hand, the DMA block connected to MPSoC through AXI interconnect block.
+
 Next, perform Validate Design (☑︎) to check whether the correct circuit has been created. If a message like Validation successful. There are no errors or critical warnings in this design. appears, it is a success. I think it's probably okay, but if you get an error, please google the error message and look it up... Finally, create a Wrapper for this circuit and it's complete. Move to the Sources tab at the top left, right-click the design_1 location in Design Sources, and click Create HDL Wrapper... from the options that appear.
+
 **6. Generate bitstream and Export the Hardware**
 
   Next, we will create a bitstream. However, there is little work to be done here, and basically it will be completed if you wait. Now that you have Vivado open, select PROGRAM AND DEBUG > Generate Bitstream from the Flow Navigator on the left. You will be told that there are no implementation results, but they say they will create them automatically, so press Yes to proceed. Next, a window called Launch Runs will appear. Set the number of jobs etc. appropriately (if you don't know, the default is fine) and press OK to start Generate Bitstream. It will take some time, so please be patient. If Bitstream Generation successfully completed. is displayed, it is complete. Leave Open Implemented Design (default) and press OK to check the completed circuit. 
