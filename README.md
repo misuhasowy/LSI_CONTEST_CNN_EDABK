@@ -294,3 +294,14 @@ Insert the micro SD card into the card slot on the board
 Connect the USB JTAG UART MicroUSB port on the board to your PC with a USB cable 
 Turn on the power
 When you turn on the power, if you see several red and yellow LEDs flashing, you will know that the power is being supplied properly. Additionally, you will know that the system is booting when the red LED turns yellow. If things are not going well, it is often the case that the type of Dip Switch or PYNQ image is incorrect, so please reconsider. If you are still having trouble, try re-inserting the boot.bin and image.ub onto the micro SD card. If the startup actually succeeds, it will look like this. It may take about a minute to start up, so please don't worry.
+ ![image](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/116929730/1484bdad-2f97-4d04-81a9-1a1d77f58dab)
+
+The camera is detected as figure below:
+ ![image](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/116929730/cf5c1e64-921d-46d8-8a16-901f24bdbc9c)
+
+And the Display Port is also detected:
+ ![image](https://github.com/misuhasowy/LSI_CONTEST_CNN_EDABK/assets/116929730/1ef07e53-8c94-4ae1-9c46-c0a63ade3ce2)
+
+After that, we use the Gstreamer command “gst-launch-1.0” with the input from USB3.0 connect to camera: “/dev/video0” and another format’s elements for the image as well as the destination position: “filesink location=/home/images.
+Next, we run the application “dma.c” for transfering the data from filesink location to CNN block through DMA block, and store the result image in “filesink location=/dev/mem/”. Finally, we use the Gstreamer command “gst-launch-1.0” with input is file’s location in /dev/mem/ folder and output is /dev/video4 which is Display port.
+Then the result is displayed in the monitor.
