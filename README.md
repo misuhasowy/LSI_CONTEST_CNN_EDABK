@@ -131,17 +131,22 @@ $: source <path to petalinux .sh file>/settings64.sh
 This is full flow for build petalinux: 
 1. Source file .sh
 source <petaLinux_tool_install_dir>/settings.sh
-2. Generate folder for build
+
+3. Generate folder for build
 petalinux-create --type project --template zynqMP --name zcu104_petalinux
-3.  cd zcu104_petalinux
-4. Get hardware file .xsa
+
+4.  cd zcu104_petalinux
+
+5. Get hardware file .xsa
 petalinux-config --get-hw-description= .xsa
-5. 
+
+6. 
 DTG Settings-> zcu104-revc
 DTG Settings-> Network sstate feeds URL-> change: v${PETALINUX_MAJOR_VER} to v2022.2
 Image Packaging Configuration → Root file System type → SD card
 Yocto Settings → (xilinx-zcu104) YOCTO_MACHINE_NAME
-6. Add user package:
+
+7. Add user package:
 petalinux_project_dir>/project-spec/meta-user/conf/user-rootfsconfig
 add:
 CONFIG_xrt
@@ -154,60 +159,109 @@ CONFIG_packagegroup-petalinux-vitisai
 CONFIG_gstreamer-vcu-examples
 
 
-7. 
-petalinux-config -c rootfs	
-Image Features-> Disable ssh-server-dropbear and enable ssh-server-openssh-> enable package-management and debug_tweaks
-Filesystem Packages-> misc->packagegroup-core-ssh-dropbear and disable packagegroup-core-ssh-dropbear
-Filesystem Packages-> console -> network -> openssh and enable openssh, openssh-sftp-server, openssh-sshd, openssh-scp
 8. 
+
+petalinux-config -c rootfs	
+
+Image Features-> Disable ssh-server-dropbear and enable ssh-server-openssh-> enable package-management and debug_tweaks
+
+Filesystem Packages-> misc->packagegroup-core-ssh-dropbear and disable packagegroup-core-ssh-dropbear
+
+Filesystem Packages-> console -> network -> openssh and enable openssh, openssh-sftp-server, openssh-sshd, openssh-scp
+9. 
+
 petalinux-config -c kernel
+
 turn off:
+
 CPU Power Management > CPU Idle > CPU idle PM support
+
 CPU Power Management > CPU Frequency scaling > CPU Frequency scaling
-9. Update device tree
+
+10. Update device tree
+
 go to: project-spec/meta-user/recipes-bsp/device-tree/files/system-user.dtsi
+
 add: 
+
 &sdhci1 {
+
       no-1-8-v;
+
       disable-wp;
+
 };
-10.
+
+11.
+
 petalinux-config
 	
 Image Packaging Configuration-> Root File System Type-> ETX4
 DTG settings -> Kernel Bootargs -> generate boot args automatically to NO
+
 update User Set Kernel Bootargs to earlycon console=ttyPS0,115200 clk_ignore_unused root=/dev/mmcblk0p2 rw rootwait cma=512M
 11.
+
 filesystem Packages → misc → python3 → all
+
 filesystem Packages → misc → python3-async
+
 filesystem Packages → misc → python3-git
+
 filesystem Packages → misc → python3-gitdb
+
 filesystem Packages → misc → python3-setuptools
+
 filesystem Packages → misc → python3-smmap
+
 filesystem Packages → x11 → base → libdrm → libdrm
+
 filesystem Packages → x11 → base → libdrm → libdrm-tests
+
 filesystem Packages → x11 → base → libdrm → libdrm-kms
+
 Petalinux Package Groups → packagegroup-petalinux-matchbox
+
 Petalinux Package Groups → packagegroup-petalinux-x11
+
 filesystem Packages → libs → opencv → opencv, opencv – apps
+
 filesystem Packages → misc → gst-player
+
 filesystem Packages → misc → gst-plugins-base → base, apps
+
 filesystem Packages → misc → gst-plugins-good
+
 filesystem Packages → misc → gstreamer1.0-meta-base → base, video, x11
+
 filesystem Packages → misc → gstreamer1.0-plugins-bad
+
 filesystem Packages → misc → gstreamer1.0-plugins-base → base, apps
+
 filesystem Packages → misc → gstreamer1.0-plugins-good
+
 filesystem Packages → misc → openamp-fw-echo-testd
+
 filesystem Packages → misc → openamp-fw-mat-muld
+
 filesystem Packages → misc → openamp-fw-rpc-demo
+
 filesystem Packages → misc → v4l-utils → v4l-utils, libv4l, irkeytable, media-ctl, rc-keymaps
+
 filesystem Packages → multimedia → all gstreamer
+
 Petalinux Package Groups → packagegroup-petalinux-gstreamer
+
 Petalinux Package Groups → packagegroup-petalinux-openamp
+
 Petalinux Package Groups → packagegroup-petalinux-opencv
+
 Petalinux Package Groups → packagegroup-petalinux-v4lutils
+
 user packages → all
+
 12. 
+
 petalinux-build	
 petalinux-package --boot --format BIN --fsbl images/linux/zynqmp_fsbl.elf --u-boot images/linux/u-boot.elf --pmufw images/linux/pmufw.elf --atf images/linux/bl31.elf --fpga images/linux/system.bit --force
 	
@@ -222,6 +276,7 @@ petalinux-package --boot --format BIN --fsbl images/linux/zynqmp_fsbl.elf --u-bo
            sdhci-caps = <0 0>;
            max-frequency = <19000000>;
 };
+
 4. Preparing for Pynq MPSoC ZCU104
 To boot from SD card, it is necessary to properly configure it and store the files. In this project, 2 partitions are needed for the SD card:
 -	boot partition: FAT32 format. ≥ 60 MB. boot.bin and image.ub files.
